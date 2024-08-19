@@ -122,3 +122,66 @@
 2024-08-19 01:27:28,183 - INFO - Waiting before sending to next contact...
 2024-08-19 01:27:28,183 - INFO - Total time taken for sending messages: 591.99 seconds
 2024-08-19 01:27:28,183 - INFO - Closing the browser
+2024-08-19 16:24:04,604 - INFO - Initializing Chrome driver
+2024-08-19 16:24:34,043 - INFO - Initializing Chrome driver
+2024-08-19 16:25:16,115 - INFO - Initializing Chrome driver
+2024-08-19 16:26:24,399 - INFO - QR code scanned
+2024-08-19 16:26:24,410 - INFO - Reading contact: Customer, 919048057376
+2024-08-19 16:26:37,776 - INFO - Opened chat for contact: Customer
+2024-08-19 16:26:38,344 - INFO - Attachment box clicked
+2024-08-19 16:26:38,552 - INFO - Document option clicked
+2024-08-19 16:26:40,652 - INFO - PDF file selected through file input
+2024-08-19 16:26:58,860 - INFO - Message sent to contact: Customer
+2024-08-19 16:26:58,861 - INFO - Time taken for sending to contact Customer: 34.45 seconds
+2024-08-19 16:27:13,861 - INFO - Waiting before sending to next contact...
+2024-08-19 16:27:13,861 - INFO - Reading contact: Customer, 919496836948
+2024-08-19 16:27:20,401 - INFO - Opened chat for contact: Customer
+2024-08-19 16:27:25,110 - INFO - Attachment box clicked
+2024-08-19 16:27:25,253 - INFO - Document option clicked
+2024-08-19 16:27:27,311 - INFO - PDF file selected through file input
+2024-08-19 16:27:42,383 - INFO - Message sent to contact: Customer
+2024-08-19 16:27:42,384 - INFO - Time taken for sending to contact Customer: 28.52 seconds
+2024-08-19 16:27:57,384 - INFO - Waiting before sending to next contact...
+2024-08-19 16:27:57,385 - INFO - Total time taken for sending messages: 92.99 seconds
+2024-08-19 16:27:57,385 - INFO - Total successful sends: 2
+2024-08-19 16:27:57,385 - INFO - Total failed sends: 0
+2024-08-19 16:27:57,385 - INFO - Closing the browser
+2024-08-19 16:28:48,514 - INFO - Initializing Chrome driver
+2024-08-19 16:29:21,665 - INFO - QR code scanned
+2024-08-19 16:29:21,672 - INFO - Reading contact: Customer, 91904805737
+2024-08-19 16:29:40,236 - ERROR - Failed to open chat for contact Customer (91904805737): Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF66A4C9642+30946]
+	(No symbol) [0x00007FF66A47E3D9]
+	(No symbol) [0x00007FF66A376FDA]
+	(No symbol) [0x00007FF66A3C822C]
+	(No symbol) [0x00007FF66A3C850C]
+	(No symbol) [0x00007FF66A40DCB7]
+	(No symbol) [0x00007FF66A3ECAAF]
+	(No symbol) [0x00007FF66A40B041]
+	(No symbol) [0x00007FF66A3EC813]
+	(No symbol) [0x00007FF66A3BA6E5]
+	(No symbol) [0x00007FF66A3BB021]
+	GetHandleVerifier [0x00007FF66A5FF84D+1301229]
+	GetHandleVerifier [0x00007FF66A60BDC7+1351783]
+	GetHandleVerifier [0x00007FF66A602A13+1313971]
+	GetHandleVerifier [0x00007FF66A4FDD16+245686]
+	(No symbol) [0x00007FF66A48759F]
+	(No symbol) [0x00007FF66A483814]
+	(No symbol) [0x00007FF66A4839A2]
+	(No symbol) [0x00007FF66A47A3FF]
+	BaseThreadInitThunk [0x00007FFEB61B257D+29]
+	RtlUserThreadStart [0x00007FFEB770AF28+40]
+
+2024-08-19 16:29:40,236 - INFO - Reading contact: Customer, 919496836948
+2024-08-19 16:29:46,902 - INFO - Opened chat for contact: Customer
+2024-08-19 16:29:47,447 - INFO - Attachment box clicked
+2024-08-19 16:29:47,583 - INFO - Document option clicked
+2024-08-19 16:29:52,862 - INFO - PDF file selected through file input
+2024-08-19 16:30:07,954 - INFO - Message sent to contact: Customer
+2024-08-19 16:30:07,954 - INFO - Time taken for sending to contact Customer: 27.72 seconds
+2024-08-19 16:30:22,954 - INFO - Waiting before sending to next contact...
+2024-08-19 16:30:22,954 - INFO - Total time taken for sending messages: 61.29 seconds
+2024-08-19 16:30:22,955 - INFO - Total successful sends: 1
+2024-08-19 16:30:22,955 - INFO - Total failed sends: 1
+2024-08-19 16:30:22,955 - INFO - Closing the browser
