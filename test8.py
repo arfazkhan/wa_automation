@@ -189,118 +189,123 @@ failure_count = 0
 # CSV file to store failed contacts
 failed_contacts_file = 'failed_contacts.csv'
 
-# Open the failed contacts CSV file in write mode
-with open(failed_contacts_file, 'w', newline='') as failed_file:
+# Open the failed contacts CSV file in append mode
+with open(failed_contacts_file, 'a', newline='') as failed_file:
     failed_writer = csv.writer(failed_file)
-    # Write the header
-    failed_writer.writerow(['Name', 'Number'])
+    # Write the header if the file is empty
+    if os.path.getsize(failed_contacts_file) == 0:
+        failed_writer.writerow(['Name', 'Number'])
 
-# Read the input CSV file
-with open('contacts.csv', 'r') as file:
-    reader = csv.reader(file)
-    for row in reader:
-        name, number = row
-        logging.info(f'Reading contact: {name}, {number}')
+    # Read the input CSV file
+    with open('contacts.csv', 'r') as file:
+        reader = csv.reader(file)
+        for row in reader:
+            name, number = row
+            logging.info(f'Reading contact: {name}, {number}')
 
-        # Validate and format the number
-        formatted_number = validate_and_format_number(number)
-        if formatted_number is None:
-            logging.error(f'Failed to format number for contact {name}: {number}')
-            failure_count += 1 # Increment failure counter
-            # Write failed contact to CSV
-            failed_writer.writerow([name, number])
-            continue
+            # Validate and format the number
+            formatted_number = validate_and_format_number(number)
+            if formatted_number is None:
+                logging.error(f'Failed to format number for contact {name}: {number}')
+                failure_count += 1
+                failed_writer.writerow([name, number])
+                continue
 
-        # Start time tracking for the individual contact
-        start_time = time()
+            # Start time tracking for the individual contact
+            start_time = time()
 
-        # Randomly select a greeting
-        greeting = random.choice(greetings)
+            # Randomly select a greeting
+            greeting = random.choice(greetings)
 
-        # Personalize message
-        personalized_message = f"*{greeting},%0A{common_message}"
+            # Personalize message
+            personalized_message = f"{greeting},%0A{common_message}"
 
-        # Rate-limited send message function
-        @rate_limit(max_messages_per_hour=200, wait_time_minutes=10)
-        def send_message(formatted_number, personalized_message):
-            # Open chat for contact
-            try:
-                driver.get(f'https://web.whatsapp.com/send?phone={formatted_number}&text={personalized_message}')
-                WebDriverWait(driver, 10).until(
-                    EC.presence_of_element_located((By.XPATH, '//div[@title="Attach"]'))
-                )
-                logging.info(f'Opened chat for contact: {name}')
-            except Exception as e:
-                logging.error(f'Failed to open chat for contact {name} ({number}): {e}')
-                return False
-
-            # Click the attachment box
-            try:
-                attachment_box = driver.find_element(By.XPATH, '//div[@title="Attach"]')
-                attachment_box.click()
-                logging.info('Attachment box clicked')
-
-                # Click the "Document" option
-                document_option = WebDriverWait(driver, 10).until(
-                    EC.element_to_be_clickable((By.XPATH, '//span[@class="xdod15v xzwifym x6ikm8r x10wlt62 xlyipyv xuxw1ft" and text()="Document"]'))
-                )
-                document_option.click()
-                logging.info('Document option clicked')
-
-                # Wait for the file picker to open and interact with it
-                sleep(2) # Ensure file picker has time to open
-
-                # Use JavaScript to set the file directly (if the file input is available)
-                file_input = driver.find_element(By.XPATH, '//input[@type="file"]')
-                file_input.send_keys(pdf_path)
-                logging.info('PDF file selected through file input')
-
-                # Wait for the file to upload
-                sleep(15)
-
-                # Click the send button
-                send_button = WebDriverWait(driver, 20).until(
-                    EC.element_to_be_clickable((By.XPATH, '//span[@data-icon="send"]'))
-                )
-                send_button.click()
-                logging.info(f'Message sent to contact: {name}')
-
-                # Wait for either the single tick or double tick to confirm message was sent
+            # Rate-limited send message function
+            @rate_limit(max_messages_per_hour=200, wait_time_minutes=10)
+            def send_message(formatted_number, personalized_message):
                 try:
+                    # Open chat for contact
+                    driver.get(f'https://web.whatsapp.com/send?phone={formatted_number}&text={personalized_message}')
+                    WebDriverWait(driver, 10).until(
+                        EC.presence_of_element_located((By.XPATH, '//div[@title="Attach"]'))
+                    )
+                    logging.info(f'Opened chat for contact: {name}')
+
+                    # Click the attachment box
+                    attachment_box = driver.find_element(By.XPATH, '//div[@title="Attach"]')
+                    attachment_box.click()
+                    logging.info('Attachment box clicked')
+
+                    # Click the "Document" option
+                    document_option = WebDriverWait(driver, 10).until(
+                        EC.element_to_be_clickable((By.XPATH, '//span[@class="xdod15v xzwifym x6ikm8r x10wlt62 xlyipyv xuxw1ft" and text()="Document"]'))
+                    )
+                    document_option.click()
+                    logging.info('Document option clicked')
+
+                    # Wait for the file picker to open and interact with it
+                    sleep(2)  # Ensure file picker has time to open
+                    file_input = driver.find_element(By.XPATH, '//input[@type="file"]')
+                    file_input.send_keys(pdf_path)
+                    logging.info('PDF file selected through file input')
+
+                    # Wait for the file to upload
+                    sleep(15)
+
+                    # Click the send button
+                    send_button = WebDriverWait(driver, 20).until(
+                        EC.element_to_be_clickable((By.XPATH, '//span[@data-icon="send"]'))
+                    )
+                    send_button.click()
+                    logging.info(f'Message sent to contact: {name}')
+
+                    # Wait for either the single tick or double tick to confirm message was sent
                     WebDriverWait(driver, 30).until(
                         EC.presence_of_element_located((By.XPATH, '//span[@data-icon="msg-check"] | //span[@data-icon="msg-dblcheck"]'))
                     )
                     logging.info(f'Message sent and confirmed for contact: {name}')
                     return True
                 except Exception as e:
-                    logging.error(f'Failed to confirm message sent for contact {name} ({number}): {e}')
+                    logging.error(f'Error occurred for contact {name} ({number}): {e}')
                     return False
-            except Exception as e:
-                logging.error(f'Failed to attach PDF or send message for contact {name} ({number}): {e}')
-                return False
 
-        # Call the rate-limited send_message function
-        if send_message(formatted_number, personalized_message):
-            success_count += 1 # Increment success counter
-        else:
-            failure_count += 1 # Increment failure counter
-            # Write failed contact to CSV
-            failed_writer.writerow([name, number])
+            MAX_RETRIES = 3
+            retries = 0
+            while retries < MAX_RETRIES:
+                try:
+                    if send_message(formatted_number, personalized_message):
+                        success_count += 1
+                        break
+                    else:
+                        failure_count += 1
+                        failed_writer.writerow([name, number])
+                        break
+                except Exception as e:
+                    logging.error(f'Error occurred for contact {name} ({number}): {e}')
+                    retries += 1
+                    if retries == MAX_RETRIES:
+                        failure_count += 1
+                        failed_writer.writerow([name, number])
 
-        # Add random delay to mimic human nature
-        delay = random.randint(5, 20)
-        sleep(delay)
-        logging.info(f'Random delay of {delay} seconds before moving to next contact.')
+            # Add random delay to mimic human nature
+            delay = random.randint(5, 20)
+            sleep(delay)
+            logging.info(f'Random delay of {delay} seconds before moving to next contact.')
 
-    # Log the total time taken
-    total_end_time = time()
-    total_time_taken = total_end_time - total_start_time
-    logging.info(f'Total time taken for sending messages: {total_time_taken:.2f} seconds')
+            # Log the time taken for the individual contact
+            end_time = time()
+            time_taken = end_time - start_time
+            logging.info(f'Time taken for sending to contact {name}: {time_taken:.2f} seconds')
 
-    # Log the success and failure counts
-    logging.info(f'Total successful sends: {success_count}')
-    logging.info(f'Total failed sends: {failure_count}')
+# Log the total time taken
+total_end_time = time()
+total_time_taken = total_end_time - total_start_time
+logging.info(f'Total time taken for sending messages: {total_time_taken:.2f} seconds')
 
-    # Close the browser
-    logging.info('Closing the browser')
-    driver.quit()
+# Log the success and failure counts
+logging.info(f'Total successful sends: {success_count}')
+logging.info(f'Total failed sends: {failure_count}')
+
+# Close the browser
+logging.info('Closing the browser')
+driver.quit()

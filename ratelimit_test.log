@@ -1,0 +1,15 @@
+2024-08-21 21:54:19,476 - INFO - Starting rate limiter test
+2024-08-21 21:54:19,477 - INFO - RateLimiter initialized with 5 tokens and last reset at 1724257459.4761567
+2024-08-21 21:54:19,477 - INFO - Token acquired. Remaining tokens: 4
+2024-08-21 21:54:20,477 - INFO - Token acquired. Remaining tokens: 3.1667232910792036
+2024-08-21 21:54:21,478 - INFO - Token acquired. Remaining tokens: 2.333486676216126
+2024-08-21 21:54:22,478 - INFO - Token acquired. Remaining tokens: 1.5002350012461347
+2024-08-21 21:54:23,479 - INFO - Token acquired. Remaining tokens: 0.6669983466466272
+2024-08-21 21:54:24,479 - INFO - Rate limit exceeded. Entering cooldown period.
+2024-08-21 21:54:24,479 - INFO - Tokens before cooldown: 0.8337160746256514
+2024-08-21 21:54:34,480 - INFO - Tokens after cooldown: 5
+2024-08-21 21:54:34,480 - INFO - Cooldown period ended. Tokens reset.
+2024-08-21 21:54:34,480 - INFO - Token acquired. Remaining tokens: 4
+2024-08-21 21:54:35,480 - INFO - Time elapsed during token requests: 16.00 seconds
+2024-08-21 21:54:35,480 - INFO - Time between token requests: [0.0, 0.0, 0.0, 0.0, 0.0, 10.000653266906738]
+2024-08-21 21:54:35,480 - INFO - Rate limiter test passed.
