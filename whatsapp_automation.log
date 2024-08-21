@@ -1,187 +1,114 @@
-2024-08-19 01:17:16,203 - INFO - Initializing Chrome driver
-2024-08-19 01:17:36,191 - INFO - QR code scanned
-2024-08-19 01:17:36,203 - INFO - Reading contact: Customer, +919895296142    
-2024-08-19 01:17:44,393 - INFO - Opened chat for contact: Customer
-2024-08-19 01:17:44,563 - INFO - Attachment box clicked
-2024-08-19 01:17:44,808 - INFO - Document option clicked
-2024-08-19 01:17:46,893 - INFO - PDF file selected through file input
-2024-08-19 01:18:04,594 - INFO - Message sent to contact: Customer
-2024-08-19 01:18:04,595 - INFO - Time taken for sending to contact Customer: 28.39 seconds
-2024-08-19 01:18:19,596 - INFO - Waiting before sending to next contact...
-2024-08-19 01:18:19,596 - INFO - Reading contact: Customer, +971501000734    
-2024-08-19 01:18:25,155 - INFO - Opened chat for contact: Customer
-2024-08-19 01:18:25,578 - INFO - Attachment box clicked
-2024-08-19 01:18:26,181 - INFO - Document option clicked
-2024-08-19 01:18:28,261 - INFO - PDF file selected through file input
-2024-08-19 01:18:43,369 - INFO - Message sent to contact: Customer
-2024-08-19 01:18:43,369 - INFO - Time taken for sending to contact Customer: 23.77 seconds
-2024-08-19 01:18:58,370 - INFO - Waiting before sending to next contact...
-2024-08-19 01:18:58,370 - INFO - Reading contact: Customer, +919526346187    
-2024-08-19 01:19:03,870 - INFO - Opened chat for contact: Customer
-2024-08-19 01:19:03,972 - INFO - Attachment box clicked
-2024-08-19 01:19:04,580 - INFO - Document option clicked
-2024-08-19 01:19:06,696 - INFO - PDF file selected through file input
-2024-08-19 01:19:21,844 - INFO - Message sent to contact: Customer
-2024-08-19 01:19:21,844 - INFO - Time taken for sending to contact Customer: 23.47 seconds
-2024-08-19 01:19:36,844 - INFO - Waiting before sending to next contact...
-2024-08-19 01:19:36,844 - INFO - Reading contact: Customer, +919745646464    
-2024-08-19 01:19:42,710 - INFO - Opened chat for contact: Customer
-2024-08-19 01:19:42,843 - INFO - Attachment box clicked
-2024-08-19 01:19:43,478 - INFO - Document option clicked
-2024-08-19 01:19:45,576 - INFO - PDF file selected through file input
-2024-08-19 01:20:00,709 - INFO - Message sent to contact: Customer
-2024-08-19 01:20:00,709 - INFO - Time taken for sending to contact Customer: 23.86 seconds
-2024-08-19 01:20:15,709 - INFO - Waiting before sending to next contact...
-2024-08-19 01:20:15,709 - INFO - Reading contact: Customer, +971555587550    
-2024-08-19 01:20:21,552 - INFO - Opened chat for contact: Customer
-2024-08-19 01:20:21,610 - INFO - Attachment box clicked
-2024-08-19 01:20:22,227 - INFO - Document option clicked
-2024-08-19 01:20:24,327 - INFO - PDF file selected through file input
-2024-08-19 01:20:39,437 - INFO - Message sent to contact: Customer
-2024-08-19 01:20:39,437 - INFO - Time taken for sending to contact Customer: 23.73 seconds
-2024-08-19 01:20:54,438 - INFO - Waiting before sending to next contact...
-2024-08-19 01:20:54,438 - INFO - Reading contact: Customer, +971502335226    
-2024-08-19 01:21:00,533 - INFO - Opened chat for contact: Customer
-2024-08-19 01:21:00,614 - INFO - Attachment box clicked
-2024-08-19 01:21:01,227 - INFO - Document option clicked
-2024-08-19 01:21:03,300 - INFO - PDF file selected through file input
-2024-08-19 01:21:18,431 - INFO - Message sent to contact: Customer
-2024-08-19 01:21:18,432 - INFO - Time taken for sending to contact Customer: 23.99 seconds
-2024-08-19 01:21:33,433 - INFO - Waiting before sending to next contact...
-2024-08-19 01:21:33,433 - INFO - Reading contact: Customer, +971544790993    
-2024-08-19 01:21:39,814 - INFO - Opened chat for contact: Customer
-2024-08-19 01:21:40,012 - INFO - Attachment box clicked
-2024-08-19 01:21:40,085 - INFO - Document option clicked
-2024-08-19 01:21:42,190 - INFO - PDF file selected through file input
-2024-08-19 01:21:57,316 - INFO - Message sent to contact: Customer
-2024-08-19 01:21:57,316 - INFO - Time taken for sending to contact Customer: 23.88 seconds
-2024-08-19 01:22:12,316 - INFO - Waiting before sending to next contact...
-2024-08-19 01:22:12,316 - INFO - Reading contact: Customer, +918086850117    
-2024-08-19 01:22:19,238 - INFO - Opened chat for contact: Customer
-2024-08-19 01:22:19,380 - INFO - Attachment box clicked
-2024-08-19 01:22:20,006 - INFO - Document option clicked
-2024-08-19 01:22:22,081 - INFO - PDF file selected through file input
-2024-08-19 01:22:37,201 - INFO - Message sent to contact: Customer
-2024-08-19 01:22:37,201 - INFO - Time taken for sending to contact Customer: 24.88 seconds
-2024-08-19 01:22:52,202 - INFO - Waiting before sending to next contact...
-2024-08-19 01:22:52,202 - INFO - Reading contact: Customer, +919288097635    
-2024-08-19 01:22:59,285 - INFO - Opened chat for contact: Customer
-2024-08-19 01:22:59,425 - INFO - Attachment box clicked
-2024-08-19 01:23:00,048 - INFO - Document option clicked
-2024-08-19 01:23:02,155 - INFO - PDF file selected through file input
-2024-08-19 01:23:17,287 - INFO - Message sent to contact: Customer
-2024-08-19 01:23:17,287 - INFO - Time taken for sending to contact Customer: 25.09 seconds
-2024-08-19 01:23:32,288 - INFO - Waiting before sending to next contact...
-2024-08-19 01:23:32,288 - INFO - Reading contact: Customer, +919142433655    
-2024-08-19 01:23:38,552 - INFO - Opened chat for contact: Customer
-2024-08-19 01:23:38,710 - INFO - Attachment box clicked
-2024-08-19 01:23:39,341 - INFO - Document option clicked
-2024-08-19 01:23:41,398 - INFO - PDF file selected through file input
-2024-08-19 01:23:56,555 - INFO - Message sent to contact: Customer
-2024-08-19 01:23:56,556 - INFO - Time taken for sending to contact Customer: 24.27 seconds
-2024-08-19 01:24:11,556 - INFO - Waiting before sending to next contact...
-2024-08-19 01:24:11,556 - INFO - Reading contact: Customer, +919633444469    
-2024-08-19 01:24:18,301 - INFO - Opened chat for contact: Customer
-2024-08-19 01:24:18,715 - INFO - Attachment box clicked
-2024-08-19 01:24:19,303 - INFO - Document option clicked
-2024-08-19 01:24:21,376 - INFO - PDF file selected through file input
-2024-08-19 01:24:36,475 - INFO - Message sent to contact: Customer
-2024-08-19 01:24:36,475 - INFO - Time taken for sending to contact Customer: 24.92 seconds
-2024-08-19 01:24:51,476 - INFO - Waiting before sending to next contact...
-2024-08-19 01:24:51,476 - INFO - Reading contact: Customer, +919995544234    
-2024-08-19 01:24:57,917 - INFO - Opened chat for contact: Customer
-2024-08-19 01:24:58,105 - INFO - Attachment box clicked
-2024-08-19 01:24:58,747 - INFO - Document option clicked
-2024-08-19 01:25:00,820 - INFO - PDF file selected through file input
-2024-08-19 01:25:15,935 - INFO - Message sent to contact: Customer
-2024-08-19 01:25:15,935 - INFO - Time taken for sending to contact Customer: 24.46 seconds
-2024-08-19 01:25:30,936 - INFO - Waiting before sending to next contact...
-2024-08-19 01:25:30,937 - INFO - Reading contact: Customer, +919746486686    
-2024-08-19 01:25:36,448 - INFO - Opened chat for contact: Customer
-2024-08-19 01:25:36,706 - INFO - Attachment box clicked
-2024-08-19 01:25:37,295 - INFO - Document option clicked
-2024-08-19 01:25:39,402 - INFO - PDF file selected through file input
-2024-08-19 01:25:54,514 - INFO - Message sent to contact: Customer
-2024-08-19 01:25:54,514 - INFO - Time taken for sending to contact Customer: 23.58 seconds
-2024-08-19 01:26:09,515 - INFO - Waiting before sending to next contact...
-2024-08-19 01:26:09,515 - INFO - Reading contact: Customer, +919447520986 
-2024-08-19 01:26:15,413 - INFO - Opened chat for contact: Customer
-2024-08-19 01:26:15,553 - INFO - Attachment box clicked
-2024-08-19 01:26:15,660 - INFO - Document option clicked
-2024-08-19 01:26:17,769 - INFO - PDF file selected through file input
-2024-08-19 01:26:32,889 - INFO - Message sent to contact: Customer
-2024-08-19 01:26:32,889 - INFO - Time taken for sending to contact Customer: 23.37 seconds
-2024-08-19 01:26:47,890 - INFO - Waiting before sending to next contact...
-2024-08-19 01:26:47,890 - INFO - Reading contact: Customer, +919048057376    
-2024-08-19 01:26:54,701 - INFO - Opened chat for contact: Customer
-2024-08-19 01:26:55,363 - INFO - Attachment box clicked
-2024-08-19 01:26:55,958 - INFO - Document option clicked
-2024-08-19 01:26:58,066 - INFO - PDF file selected through file input
-2024-08-19 01:27:13,182 - INFO - Message sent to contact: Customer
-2024-08-19 01:27:13,182 - INFO - Time taken for sending to contact Customer: 25.29 seconds
-2024-08-19 01:27:28,183 - INFO - Waiting before sending to next contact...
-2024-08-19 01:27:28,183 - INFO - Total time taken for sending messages: 591.99 seconds
-2024-08-19 01:27:28,183 - INFO - Closing the browser
-2024-08-19 16:24:04,604 - INFO - Initializing Chrome driver
-2024-08-19 16:24:34,043 - INFO - Initializing Chrome driver
-2024-08-19 16:25:16,115 - INFO - Initializing Chrome driver
-2024-08-19 16:26:24,399 - INFO - QR code scanned
-2024-08-19 16:26:24,410 - INFO - Reading contact: Customer, 919048057376
-2024-08-19 16:26:37,776 - INFO - Opened chat for contact: Customer
-2024-08-19 16:26:38,344 - INFO - Attachment box clicked
-2024-08-19 16:26:38,552 - INFO - Document option clicked
-2024-08-19 16:26:40,652 - INFO - PDF file selected through file input
-2024-08-19 16:26:58,860 - INFO - Message sent to contact: Customer
-2024-08-19 16:26:58,861 - INFO - Time taken for sending to contact Customer: 34.45 seconds
-2024-08-19 16:27:13,861 - INFO - Waiting before sending to next contact...
-2024-08-19 16:27:13,861 - INFO - Reading contact: Customer, 919496836948
-2024-08-19 16:27:20,401 - INFO - Opened chat for contact: Customer
-2024-08-19 16:27:25,110 - INFO - Attachment box clicked
-2024-08-19 16:27:25,253 - INFO - Document option clicked
-2024-08-19 16:27:27,311 - INFO - PDF file selected through file input
-2024-08-19 16:27:42,383 - INFO - Message sent to contact: Customer
-2024-08-19 16:27:42,384 - INFO - Time taken for sending to contact Customer: 28.52 seconds
-2024-08-19 16:27:57,384 - INFO - Waiting before sending to next contact...
-2024-08-19 16:27:57,385 - INFO - Total time taken for sending messages: 92.99 seconds
-2024-08-19 16:27:57,385 - INFO - Total successful sends: 2
-2024-08-19 16:27:57,385 - INFO - Total failed sends: 0
-2024-08-19 16:27:57,385 - INFO - Closing the browser
-2024-08-19 16:28:48,514 - INFO - Initializing Chrome driver
-2024-08-19 16:29:21,665 - INFO - QR code scanned
-2024-08-19 16:29:21,672 - INFO - Reading contact: Customer, 91904805737
-2024-08-19 16:29:40,236 - ERROR - Failed to open chat for contact Customer (91904805737): Message: 
+2024-08-21 14:57:32,370 - INFO - Initializing Chrome driver
+2024-08-21 14:58:14,981 - INFO - QR code scanned
+2024-08-21 14:58:14,984 - INFO - Reading contact: Customer,  919048057376
+2024-08-21 14:58:14,984 - INFO - Validating number:  919048057376
+2024-08-21 14:58:14,985 - WARNING - Number format not recognized:  919048057376
+2024-08-21 14:58:14,985 - ERROR - Invalid number for contact Customer:  919048057376
+2024-08-21 14:58:14,985 - INFO - Reading contact: Customer,  919895296142
+2024-08-21 14:58:14,985 - INFO - Validating number:  919895296142
+2024-08-21 14:58:14,985 - WARNING - Number format not recognized:  919895296142
+2024-08-21 14:58:14,985 - ERROR - Invalid number for contact Customer:  919895296142
+2024-08-21 14:58:14,986 - INFO - Total time taken: 0.00 seconds
+2024-08-21 14:58:14,986 - INFO - Successful sends: 0
+2024-08-21 14:58:14,986 - INFO - Failed sends: 2
+2024-08-21 15:03:36,283 - INFO - Initializing Chrome driver
+2024-08-21 15:04:20,332 - INFO - QR code scanned
+2024-08-21 15:04:20,333 - INFO - Reading contact: Customer,  919048057376
+2024-08-21 15:04:20,333 - INFO - Validating number:  919048057376
+2024-08-21 15:04:20,333 - INFO - Cleaned number: 9048057376
+2024-08-21 15:04:20,334 - INFO - Number is a valid Indian number without prefix
+2024-08-21 15:04:20,334 - INFO - Formatted number: 919048057376
+2024-08-21 15:04:38,282 - INFO - Opened chat for contact: Customer
+2024-08-21 15:04:38,869 - INFO - Attachment box clicked
+2024-08-21 15:04:39,470 - INFO - Document option clicked
+2024-08-21 15:04:41,491 - ERROR - Failed to send document to contact Customer (919048057376): Message: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@accept="*/*"]"}
+  (Session info: chrome=127.0.6533.120); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Stacktrace:
-	GetHandleVerifier [0x00007FF66A4C9642+30946]
-	(No symbol) [0x00007FF66A47E3D9]
-	(No symbol) [0x00007FF66A376FDA]
-	(No symbol) [0x00007FF66A3C822C]
-	(No symbol) [0x00007FF66A3C850C]
-	(No symbol) [0x00007FF66A40DCB7]
-	(No symbol) [0x00007FF66A3ECAAF]
-	(No symbol) [0x00007FF66A40B041]
-	(No symbol) [0x00007FF66A3EC813]
-	(No symbol) [0x00007FF66A3BA6E5]
-	(No symbol) [0x00007FF66A3BB021]
-	GetHandleVerifier [0x00007FF66A5FF84D+1301229]
-	GetHandleVerifier [0x00007FF66A60BDC7+1351783]
-	GetHandleVerifier [0x00007FF66A602A13+1313971]
-	GetHandleVerifier [0x00007FF66A4FDD16+245686]
-	(No symbol) [0x00007FF66A48759F]
-	(No symbol) [0x00007FF66A483814]
-	(No symbol) [0x00007FF66A4839A2]
-	(No symbol) [0x00007FF66A47A3FF]
+	GetHandleVerifier [0x00007FF7C6739642+30946]
+	(No symbol) [0x00007FF7C66EE3D9]
+	(No symbol) [0x00007FF7C65E6FDA]
+	(No symbol) [0x00007FF7C663822C]
+	(No symbol) [0x00007FF7C663850C]
+	(No symbol) [0x00007FF7C667DCB7]
+	(No symbol) [0x00007FF7C665CAAF]
+	(No symbol) [0x00007FF7C667B041]
+	(No symbol) [0x00007FF7C665C813]
+	(No symbol) [0x00007FF7C662A6E5]
+	(No symbol) [0x00007FF7C662B021]
+	GetHandleVerifier [0x00007FF7C686F84D+1301229]
+	GetHandleVerifier [0x00007FF7C687BDC7+1351783]
+	GetHandleVerifier [0x00007FF7C6872A13+1313971]
+	GetHandleVerifier [0x00007FF7C676DD16+245686]
+	(No symbol) [0x00007FF7C66F759F]
+	(No symbol) [0x00007FF7C66F3814]
+	(No symbol) [0x00007FF7C66F39A2]
+	(No symbol) [0x00007FF7C66EA3FF]
 	BaseThreadInitThunk [0x00007FFEB61B257D+29]
 	RtlUserThreadStart [0x00007FFEB770AF28+40]
 
-2024-08-19 16:29:40,236 - INFO - Reading contact: Customer, 919496836948
-2024-08-19 16:29:46,902 - INFO - Opened chat for contact: Customer
-2024-08-19 16:29:47,447 - INFO - Attachment box clicked
-2024-08-19 16:29:47,583 - INFO - Document option clicked
-2024-08-19 16:29:52,862 - INFO - PDF file selected through file input
-2024-08-19 16:30:07,954 - INFO - Message sent to contact: Customer
-2024-08-19 16:30:07,954 - INFO - Time taken for sending to contact Customer: 27.72 seconds
-2024-08-19 16:30:22,954 - INFO - Waiting before sending to next contact...
-2024-08-19 16:30:22,954 - INFO - Total time taken for sending messages: 61.29 seconds
-2024-08-19 16:30:22,955 - INFO - Total successful sends: 1
-2024-08-19 16:30:22,955 - INFO - Total failed sends: 1
-2024-08-19 16:30:22,955 - INFO - Closing the browser
+2024-08-21 15:04:41,492 - INFO - Reading contact: Customer,  919895296142
+2024-08-21 15:04:41,492 - INFO - Validating number:  919895296142
+2024-08-21 15:04:41,492 - INFO - Cleaned number: 9895296142
+2024-08-21 15:04:41,492 - INFO - Number is a valid Indian number without prefix
+2024-08-21 15:04:41,492 - INFO - Formatted number: 919895296142
+2024-08-21 15:04:47,915 - INFO - Opened chat for contact: Customer
+2024-08-21 15:04:53,120 - INFO - Attachment box clicked
+2024-08-21 15:04:53,697 - INFO - Document option clicked
+2024-08-21 15:04:55,717 - ERROR - Failed to send document to contact Customer (919895296142): Message: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@accept="*/*"]"}
+  (Session info: chrome=127.0.6533.120); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF7C6739642+30946]
+	(No symbol) [0x00007FF7C66EE3D9]
+	(No symbol) [0x00007FF7C65E6FDA]
+	(No symbol) [0x00007FF7C663822C]
+	(No symbol) [0x00007FF7C663850C]
+	(No symbol) [0x00007FF7C667DCB7]
+	(No symbol) [0x00007FF7C665CAAF]
+	(No symbol) [0x00007FF7C667B041]
+	(No symbol) [0x00007FF7C665C813]
+	(No symbol) [0x00007FF7C662A6E5]
+	(No symbol) [0x00007FF7C662B021]
+	GetHandleVerifier [0x00007FF7C686F84D+1301229]
+	GetHandleVerifier [0x00007FF7C687BDC7+1351783]
+	GetHandleVerifier [0x00007FF7C6872A13+1313971]
+	GetHandleVerifier [0x00007FF7C676DD16+245686]
+	(No symbol) [0x00007FF7C66F759F]
+	(No symbol) [0x00007FF7C66F3814]
+	(No symbol) [0x00007FF7C66F39A2]
+	(No symbol) [0x00007FF7C66EA3FF]
+	BaseThreadInitThunk [0x00007FFEB61B257D+29]
+	RtlUserThreadStart [0x00007FFEB770AF28+40]
+
+2024-08-21 15:04:55,718 - INFO - Total time taken: 35.39 seconds
+2024-08-21 15:04:55,718 - INFO - Successful sends: 0
+2024-08-21 15:04:55,718 - INFO - Failed sends: 2
+2024-08-21 15:13:31,357 - INFO - Initializing Chrome driver
+2024-08-21 15:15:34,962 - INFO - QR code scanned
+2024-08-21 15:15:34,963 - INFO - Reading contact: Customer,  919048057376
+2024-08-21 15:15:34,963 - INFO - Validating number:  919048057376
+2024-08-21 15:15:34,963 - INFO - Cleaned number: 9048057376
+2024-08-21 15:15:34,963 - INFO - Number is a valid Indian number without prefix
+2024-08-21 15:15:44,407 - INFO - Opened chat for contact: Customer
+2024-08-21 15:15:45,088 - INFO - Attachment box clicked
+2024-08-21 15:15:45,703 - INFO - Document option clicked
+2024-08-21 15:15:47,815 - INFO - PDF file selected through file input
+2024-08-21 15:16:02,974 - INFO - Message sent to contact: Customer
+2024-08-21 15:16:02,988 - INFO - Message sent and confirmed for contact: Customer
+2024-08-21 15:16:14,989 - INFO - Random delay of 12 seconds before moving to next contact.
+2024-08-21 15:16:14,989 - INFO - Time taken for sending to contact Customer: 40.03 seconds
+2024-08-21 15:16:14,989 - INFO - Reading contact: Customer,  919895296142
+2024-08-21 15:16:14,989 - INFO - Validating number:  919895296142
+2024-08-21 15:16:14,989 - INFO - Cleaned number: 9895296142
+2024-08-21 15:16:14,989 - INFO - Number is a valid Indian number without prefix
+2024-08-21 15:16:21,504 - INFO - Opened chat for contact: Customer
+2024-08-21 15:16:22,099 - INFO - Attachment box clicked
+2024-08-21 15:16:22,251 - INFO - Document option clicked
+2024-08-21 15:16:27,889 - INFO - PDF file selected through file input
+2024-08-21 15:16:43,032 - INFO - Message sent to contact: Customer
+2024-08-21 15:16:43,048 - INFO - Message sent and confirmed for contact: Customer
+2024-08-21 15:16:57,049 - INFO - Random delay of 14 seconds before moving to next contact.
+2024-08-21 15:16:57,049 - INFO - Time taken for sending to contact Customer: 42.06 seconds
+2024-08-21 15:16:57,050 - INFO - Total time taken for sending messages: 82.09 seconds
+2024-08-21 15:16:57,050 - INFO - Total successful sends: 2
+2024-08-21 15:16:57,050 - INFO - Total failed sends: 0
+2024-08-21 15:16:57,050 - INFO - Closing the browser

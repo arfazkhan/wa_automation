@@ -23,7 +23,7 @@ logging.info('QR code scanned')
 # Path to the PDF file
 pdf_path = os.path.abspath('menu.pdf')
 
-common_message = """Greetings from City Burger Restaurant..!%0AWe are delighted to share our latest menu with you.%0A%0AFor orders, visit: https://wa.me/97142211158"""
+common_message = """Greetings from City Burger Restaurant..!%0AWe are delighted to share our latest menu with you.%0A%0AFor orders, visit: https://wa.me/97142211158 or click on any pages in the menu."""
 
 # Define greetings list
 greetings = ["Dear Customer","Hi there", "Hello", "Hi", "Halla Wallah"]

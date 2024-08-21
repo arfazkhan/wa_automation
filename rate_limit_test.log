@@ -1,0 +1,66 @@
+2024-08-21 16:34:48,798 - INFO - Testing contact: Test User, +971000000001
+2024-08-21 16:34:48,798 - INFO - Mock send message to +971000000001 with message: Test message for Test User: This is a test message.
+2024-08-21 16:34:51,799 - INFO - Random delay of 3 seconds before moving to next contact.
+2024-08-21 16:34:51,799 - INFO - Testing contact: Test User, +971000000002
+2024-08-21 16:34:51,799 - INFO - Mock send message to +971000000002 with message: Test message for Test User: This is a test message.
+2024-08-21 16:34:54,800 - INFO - Random delay of 3 seconds before moving to next contact.
+2024-08-21 16:34:54,801 - INFO - Testing contact: Test User, +971000000003
+2024-08-21 16:34:54,801 - INFO - Mock send message to +971000000003 with message: Test message for Test User: This is a test message.
+2024-08-21 16:34:55,802 - INFO - Random delay of 1 seconds before moving to next contact.
+2024-08-21 16:34:55,802 - INFO - Testing contact: Test User, +971000000004
+2024-08-21 16:34:55,802 - INFO - Mock send message to +971000000004 with message: Test message for Test User: This is a test message.
+2024-08-21 16:34:56,803 - INFO - Random delay of 1 seconds before moving to next contact.
+2024-08-21 16:34:56,803 - INFO - Testing contact: Test User, +971000000005
+2024-08-21 16:34:56,803 - INFO - Mock send message to +971000000005 with message: Test message for Test User: This is a test message.
+2024-08-21 16:34:58,803 - INFO - Random delay of 2 seconds before moving to next contact.
+2024-08-21 16:34:58,803 - INFO - Testing contact: Test User, +971000000006
+2024-08-21 16:34:58,803 - INFO - Rate limit reached. Waiting for 1 minutes before sending more messages.
+2024-08-21 16:35:58,804 - INFO - Mock send message to +971000000006 with message: Test message for Test User: This is a test message.
+2024-08-21 16:35:59,805 - INFO - Random delay of 1 seconds before moving to next contact.
+2024-08-21 16:35:59,805 - INFO - Testing contact: Test User, +971000000007
+2024-08-21 16:35:59,805 - INFO - Mock send message to +971000000007 with message: Test message for Test User: This is a test message.
+2024-08-21 16:36:02,806 - INFO - Random delay of 3 seconds before moving to next contact.
+2024-08-21 16:36:02,807 - INFO - Testing contact: Test User, +971000000008
+2024-08-21 16:36:02,807 - INFO - Mock send message to +971000000008 with message: Test message for Test User: This is a test message.
+2024-08-21 16:36:04,808 - INFO - Random delay of 2 seconds before moving to next contact.
+2024-08-21 16:36:04,808 - INFO - Testing contact: Test User, +971000000009
+2024-08-21 16:36:04,808 - INFO - Mock send message to +971000000009 with message: Test message for Test User: This is a test message.
+2024-08-21 16:36:06,808 - INFO - Random delay of 2 seconds before moving to next contact.
+2024-08-21 16:36:06,808 - INFO - Testing contact: Test User, +971000000010
+2024-08-21 16:36:06,808 - INFO - Mock send message to +971000000010 with message: Test message for Test User: This is a test message.
+2024-08-21 16:36:09,809 - INFO - Random delay of 3 seconds before moving to next contact.
+2024-08-21 16:36:09,809 - INFO - Testing contact: Test User, +971000000011
+2024-08-21 16:36:09,810 - INFO - Rate limit reached. Waiting for 1 minutes before sending more messages.
+2024-08-21 16:37:09,811 - INFO - Mock send message to +971000000011 with message: Test message for Test User: This is a test message.
+2024-08-21 16:37:11,829 - INFO - Random delay of 2 seconds before moving to next contact.
+2024-08-21 16:37:11,829 - INFO - Testing contact: Test User, +971000000012
+2024-08-21 16:37:11,829 - INFO - Mock send message to +971000000012 with message: Test message for Test User: This is a test message.
+2024-08-21 16:37:14,830 - INFO - Random delay of 3 seconds before moving to next contact.
+2024-08-21 16:37:14,830 - INFO - Testing contact: Test User, +971000000013
+2024-08-21 16:37:14,830 - INFO - Mock send message to +971000000013 with message: Test message for Test User: This is a test message.
+2024-08-21 16:37:17,831 - INFO - Random delay of 3 seconds before moving to next contact.
+2024-08-21 16:37:17,831 - INFO - Testing contact: Test User, +971000000014
+2024-08-21 16:37:17,831 - INFO - Mock send message to +971000000014 with message: Test message for Test User: This is a test message.
+2024-08-21 16:37:19,832 - INFO - Random delay of 2 seconds before moving to next contact.
+2024-08-21 16:37:19,832 - INFO - Testing contact: Test User, +971000000015
+2024-08-21 16:37:19,832 - INFO - Mock send message to +971000000015 with message: Test message for Test User: This is a test message.
+2024-08-21 16:37:22,833 - INFO - Random delay of 3 seconds before moving to next contact.
+2024-08-21 16:37:22,833 - INFO - Testing contact: Test User, +971000000016
+2024-08-21 16:37:22,833 - INFO - Rate limit reached. Waiting for 1 minutes before sending more messages.
+2024-08-21 16:38:22,834 - INFO - Mock send message to +971000000016 with message: Test message for Test User: This is a test message.
+2024-08-21 16:38:25,836 - INFO - Random delay of 3 seconds before moving to next contact.
+2024-08-21 16:38:25,836 - INFO - Testing contact: Test User, +971000000017
+2024-08-21 16:38:25,836 - INFO - Mock send message to +971000000017 with message: Test message for Test User: This is a test message.
+2024-08-21 16:38:28,837 - INFO - Random delay of 3 seconds before moving to next contact.
+2024-08-21 16:38:28,837 - INFO - Testing contact: Test User, +971000000018
+2024-08-21 16:38:28,837 - INFO - Mock send message to +971000000018 with message: Test message for Test User: This is a test message.
+2024-08-21 16:38:29,838 - INFO - Random delay of 1 seconds before moving to next contact.
+2024-08-21 16:38:29,839 - INFO - Testing contact: Test User, +971000000019
+2024-08-21 16:38:29,839 - INFO - Mock send message to +971000000019 with message: Test message for Test User: This is a test message.
+2024-08-21 16:38:32,840 - INFO - Random delay of 3 seconds before moving to next contact.
+2024-08-21 16:38:32,840 - INFO - Testing contact: Test User, +971000000020
+2024-08-21 16:38:32,840 - INFO - Mock send message to +971000000020 with message: Test message for Test User: This is a test message.
+2024-08-21 16:38:34,841 - INFO - Random delay of 2 seconds before moving to next contact.
+2024-08-21 16:38:34,843 - INFO - Total time taken for test: 226.05 seconds
+2024-08-21 16:38:34,843 - INFO - Total successful sends: 20
+2024-08-21 16:38:34,843 - INFO - Total failed sends: 0
