@@ -1,0 +1,41 @@
+2024-08-22 02:36:13,684 - INFO - RateLimiter initialized with 200 tokens and last reset at 1724274373.6846662
+2024-08-22 02:36:13,684 - INFO - Initializing Chrome driver
+2024-08-22 02:37:05,608 - WARNING - The chromedriver version (127.0.6533.119) detected in PATH at chromedriver.EXE might not be compatible with the detected chrome version (128.0.6613.84); currently, chromedriver 128.0.6613.84 is recommended for chrome 128.*, so it is advised to delete the driver in PATH and retry
+2024-08-22 02:37:59,980 - INFO - QR code scanned
+2024-08-22 02:37:59,990 - INFO - Reading contact: Arfaz, 919048057376
+2024-08-22 02:37:59,990 - INFO - Validating number: 919048057376
+2024-08-22 02:37:59,990 - INFO - Number is a valid Indian number
+2024-08-22 02:38:10,783 - INFO - Opened chat for contact: Arfaz
+2024-08-22 02:38:11,997 - INFO - Attachment box clicked
+2024-08-22 02:38:12,623 - INFO - Photos & videos option clicked
+2024-08-22 02:38:19,263 - INFO - Image or video file selected through file input
+2024-08-22 02:38:29,122 - INFO - Message with image/video sent to contact: Arfaz
+2024-08-22 02:38:29,156 - INFO - Message sent and confirmed for contact: Arfaz
+2024-08-22 02:38:35,156 - INFO - Random delay of 6 seconds before moving to next contact.
+2024-08-22 02:38:35,156 - INFO - Time taken for sending to contact Arfaz: 35.17 seconds
+2024-08-22 02:38:35,156 - INFO - Token acquired. Remaining tokens: 199
+2024-08-22 02:38:35,156 - INFO - Skipping empty row
+2024-08-22 02:38:35,156 - ERROR - Error reading contact: Contact without name
+2024-08-22 02:38:35,157 - ERROR - Error reading contact: Contact without name
+2024-08-22 02:38:35,157 - ERROR - Error reading contact: Contact without number
+2024-08-22 02:38:35,158 - ERROR - Error reading contact: Contact without name
+2024-08-22 02:38:35,158 - INFO - Reading contact: 1, avc
+2024-08-22 02:38:35,158 - INFO - Validating number: avc
+2024-08-22 02:38:35,158 - WARNING - Number format not recognized after cleaning: avc
+2024-08-22 02:38:35,158 - ERROR - Failed to format number for contact 1: avc
+2024-08-22 02:38:35,158 - INFO - Reading contact: ashaz, +919496836948
+2024-08-22 02:38:35,158 - INFO - Validating number: +919496836948
+2024-08-22 02:38:35,158 - INFO - Number is a valid Indian number
+2024-08-22 02:38:41,680 - INFO - Opened chat for contact: ashaz
+2024-08-22 02:38:42,067 - INFO - Attachment box clicked
+2024-08-22 02:38:46,983 - INFO - Photos & videos option clicked
+2024-08-22 02:38:49,032 - INFO - Image or video file selected through file input
+2024-08-22 02:38:57,128 - INFO - Message with image/video sent to contact: ashaz
+2024-08-22 02:38:57,138 - INFO - Message sent and confirmed for contact: ashaz
+2024-08-22 02:39:08,139 - INFO - Random delay of 11 seconds before moving to next contact.
+2024-08-22 02:39:08,139 - INFO - Time taken for sending to contact ashaz: 32.98 seconds
+2024-08-22 02:39:08,139 - INFO - Token acquired. Remaining tokens: 199
+2024-08-22 02:39:08,139 - INFO - Total time taken for sending messages: 68.16 seconds
+2024-08-22 02:39:08,139 - INFO - Total successful sends: 2
+2024-08-22 02:39:08,139 - INFO - Total failed sends: 1
+2024-08-22 02:39:08,139 - INFO - Closing the browser
