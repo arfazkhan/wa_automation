@@ -64,14 +64,26 @@ def random_sleep(min_time=1, max_time=3):
     logging.info(f"Sleeping for {sleep_time:.2f} seconds.")
     sleep(sleep_time)
 
-# Setup WebDriver
-logging.info('Initializing Chrome driver')
-driver = webdriver.Chrome()
-driver.get('https://web.whatsapp.com/')
+def initialize_driver():
+    """Initialize the Chrome WebDriver and open WhatsApp Web."""
+    try:
+        logging.info('Initializing Chrome driver')
+        driver = webdriver.Chrome()
+        driver.get('https://web.whatsapp.com/')
+        logging.info('Chrome driver initialized and WhatsApp Web opened.')
+        return driver
+    except Exception as e:
+        logging.error(f"Error initializing Chrome driver: {e}")
+        raise
 
-# Wait for QR code scan
-input('Enter anything after scanning QR code')
-logging.info('QR code scanned')
+def wait_for_qr_scan():
+    """Wait for the QR code to be scanned by the user."""
+    try:
+        input('Enter anything after scanning QR code')
+        logging.info('QR code scanned successfully.')
+    except Exception as e:
+        logging.error(f"Error waiting for QR code scan: {e}")
+        raise
 
 # Define the auto-reply message
 auto_reply_message = "Hello! This is an automated reply from our WhatsApp Business account."
@@ -146,18 +158,28 @@ def reply_to_message(chat):
 
 def save_unread_contacts():
     """Save unread contact information to a CSV file."""
-    with open('unread_contacts.csv', 'w', newline='') as file:
-        writer = csv.writer(file)
-        writer.writerow(['Contact Number'])
-        for contact in unread_contacts:
-            writer.writerow([contact])
-    logging.info("Unread contacts saved to 'unread_contacts.csv'.")
+    try:
+        with open('unread_contacts.csv', 'w', newline='') as file:
+            writer = csv.writer(file)
+            writer.writerow(['Contact Number'])
+            for contact in unread_contacts:
+                writer.writerow([contact])
+        logging.info("Unread contacts saved to 'unread_contacts.csv'.")
+    except Exception as e:
+        logging.error(f"Error saving contacts to CSV: {e}")
 
 def cleanup():
     """Cleanup function to save contacts and close WebDriver."""
-    save_unread_contacts()
-    driver.quit()
-    logging.info("Closed WebDriver and saved contacts.")
+    try:
+        save_unread_contacts()
+    except Exception as e:
+        logging.error(f"Error during cleanup while saving contacts: {e}")
+    finally:
+        try:
+            driver.quit()
+            logging.info("Closed WebDriver.")
+        except Exception as e:
+            logging.error(f"Error closing WebDriver: {e}")
 
 # Register the cleanup function to run on exit
 atexit.register(cleanup)
@@ -165,33 +187,40 @@ atexit.register(cleanup)
 def main():
     """Main function to monitor and auto-reply to messages."""
     try:
-        while True:
-            click_unread_button()  # Filter unread messages
-            random_sleep(2, 4)  # Random sleep after clicking the 'Unread' button
-            
-            unread_chats = find_unread_chats()
-            if unread_chats:
-                logging.info(f"Found {len(unread_chats)} unread chats.")
-                for chat in unread_chats:
-                    contact_number = get_contact_number(chat)
-                    if contact_number and contact_number not in processed_contacts:
-                        unread_contacts.append(contact_number)
-                        processed_contacts.add(contact_number)
-                        reply_to_message(chat)
-                        random_sleep(1, 3)  # Random sleep between replying to different chats
-            
-            else:
-                logging.info("No new unread messages.")
-            
-            random_sleep(5, 10)  # Random sleep before checking for new messages again
+        global driver
+        driver = initialize_driver()
+        wait_for_qr_scan()
 
-            # Simulate rate limiting
-            rate_limiter.get_token()
+        while True:
+            try:
+                click_unread_button()  # Filter unread messages
+                random_sleep(2, 4)  # Random sleep after clicking the 'Unread' button
+                
+                unread_chats = find_unread_chats()
+                if unread_chats:
+                    logging.info(f"Found {len(unread_chats)} unread chats.")
+                    for chat in unread_chats:
+                        contact_number = get_contact_number(chat)
+                        if contact_number and contact_number not in processed_contacts:
+                            unread_contacts.append(contact_number)
+                            processed_contacts.add(contact_number)
+                            reply_to_message(chat)
+                            random_sleep(1, 3)  # Random sleep between replying to different chats
+                else:
+                    logging.info("No new unread messages.")
+                
+                random_sleep(5, 10)  # Random sleep before checking for new messages again
+
+                # Simulate rate limiting
+                rate_limiter.get_token()
+
+            except Exception as e:
+                logging.error(f"Error in main loop: {e}")
 
     except KeyboardInterrupt:
-        logging.info("Exiting...")
+        logging.info("Exiting due to keyboard interrupt.")
     except Exception as e:
-        logging.error(f"An error occurred: {e}")
+        logging.error(f"An error occurred in main function: {e}")
 
 if __name__ == "__main__":
     main()
