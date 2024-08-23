@@ -8,6 +8,7 @@
 # pylint: disable=line-too-long
 # pylint: disable=invalid-name
 
+import csv
 import logging
 import random
 import threading
@@ -91,6 +92,26 @@ def find_unread_chats():
         logging.error(f"Error finding unread chats: {e}")
         return []
 
+def get_contact_number(chat):
+    """Extract contact number from the unread chat element."""
+    try:
+        chat.click()
+        random_sleep(1, 2)  # Random sleep to simulate human behavior
+
+        # Extract the contact number (update the XPath if needed)
+        contact_number_element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located(
+                (By.XPATH, "//span[contains(@class, 'x1iyjqo2') and contains(@class, 'x6ikm8r') and contains(@class, 'x10wlt62')]")
+            )
+        )
+        contact_number = contact_number_element.text
+        logging.info(f"Contact number extracted: {contact_number}")
+
+        return contact_number
+    except Exception as e:
+        logging.error(f"Error extracting contact number: {e}")
+        return None
+
 def reply_to_message(chat):
     """Click on chat, type the reply message, and send it."""
     try:
@@ -119,8 +140,18 @@ def reply_to_message(chat):
     except Exception as e:
         logging.error(f"Error while sending auto-reply: {e}")
 
+def save_unread_contacts(contacts):
+    """Save unread contact information to a CSV file."""
+    with open('unread_contacts.csv', 'w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(['Contact Number'])
+        for contact in contacts:
+            writer.writerow([contact])
+    logging.info("Unread contacts saved to 'unread_contacts.csv'.")
+
 def main():
     """Main function to monitor and auto-reply to messages."""
+    unread_contacts = []  # List to store unread contact info
     try:
         while True:
             click_unread_button()  # Filter unread messages
@@ -130,8 +161,14 @@ def main():
             if unread_chats:
                 logging.info(f"Found {len(unread_chats)} unread chats.")
                 for chat in unread_chats:
-                    reply_to_message(chat)
-                    random_sleep(1, 3)  # Random sleep between replying to different chats
+                    contact_number = get_contact_number(chat)
+                    if contact_number:
+                        unread_contacts.append(contact_number)
+                        reply_to_message(chat)
+                        random_sleep(1, 3)  # Random sleep between replying to different chats
+            
+                # Save unread contacts to CSV
+                save_unread_contacts(unread_contacts)
             else:
                 logging.info("No new unread messages.")
             
