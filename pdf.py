@@ -170,10 +170,6 @@ with open(failed_contacts_file, 'w', newline='') as failed_file, \
                     logging.info(f'Skipping duplicate contact: {name} ({formatted_number})')
                     continue
 
-                # Add the contact to the set of sent contacts and CSV
-                sent_contacts.add(formatted_number)
-                sent_writer.writerow([formatted_number])
-
                 # Start time tracking for the individual contact
                 start_time = time()
 
@@ -239,6 +235,11 @@ with open(failed_contacts_file, 'w', newline='') as failed_file, \
                         )
                         logging.info(f'Message sent and confirmed for contact: {name}')
                         success_count += 1  # Increment success counter
+
+                        # **Add the contact to the set of sent contacts and CSV after success**
+                        sent_contacts.add(formatted_number)
+                        sent_writer.writerow([formatted_number])
+
                     except Exception as e:
                         logging.error(f'Failed to confirm message sent for contact {name}: {e}')
                         failure_count += 1  # Increment failure counter
