@@ -1,46 +1,78 @@
+# pylint: disable=no-member
+# pylint: disable=missing-docstring
+# pylint: disable=logging-fstring-interpolation
+# pylint: disable=redefined-outer-name
+# pylint: disable=self-assigning-variable
+# pylint: disable=unspecified-encoding
+# pylint: disable=broad-exception-caught
+# pylint: disable=line-too-long
+# pylint: disable=invalid-name
+
 import logging
 import random
-import time
+import threading
+from time import sleep, time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.chrome.options import Options
-from selenium.common.exceptions import NoSuchElementException
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
-# Configure logging
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.FileHandler("whatsapp_auto_reply.log"),
-        logging.StreamHandler()
-    ]
-)
+# Rate limiter settings
+RATE_LIMIT = 200  # 200 tokens per hour
+TIME_WINDOW = 3600  # 1 hour
+COOL_DOWN = 600  # 10 minutes
 
-# Set up Chrome options for Selenium
-chrome_options = Options()
-chrome_options.add_argument("--user-data-dir=./User_Data")  # Maintain session (avoid scanning QR repeatedly)
+class RateLimiter:
+    def __init__(self):
+        self.tokens = RATE_LIMIT
+        self.last_reset = time()
+        self.lock = threading.Lock()
+        logging.info(f'RateLimiter initialized with {self.tokens} tokens and last reset at {self.last_reset}')
 
-# Initialize WebDriver
-service = Service('/path/to/chromedriver')  # Update this path to the location of your chromedriver
-driver = webdriver.Chrome(service=service, options=chrome_options)
+    def get_token(self):
+        with self.lock:
+            current_time = time()
+            elapsed_time = current_time - self.last_reset
 
-# Navigate to WhatsApp Web
-driver.get('https://web.whatsapp.com')
+            # Update tokens based on elapsed time
+            self.tokens = min(RATE_LIMIT, self.tokens + (elapsed_time / TIME_WINDOW) * RATE_LIMIT)
+            self.last_reset = current_time
 
-# Wait for manual QR scan
-logging.info("Scan QR code to log in to WhatsApp Web")
-time.sleep(15)  # Adjust this as needed to allow for QR scan
+            if self.tokens < 1:
+                logging.info('Rate limit exceeded. Entering cooldown period.')
+                sleep(COOL_DOWN)
+                # After cooldown, reset tokens and update last_reset to the current time
+                self.tokens = RATE_LIMIT
+                self.last_reset = time()
+                logging.info('Cooldown period ended. Tokens reset.')
 
-# Constant auto-reply message
-auto_reply_message = "Hello! This is an automated reply. For queries and ordering please contact or whatsapp us at +97142211158 ."
+            self.tokens -= 1
+            logging.info(f'Token acquired. Remaining tokens: {self.tokens}')
+
+# Setup logging
+logging.basicConfig(filename='whatsapp_auto_reply.log', level=logging.INFO,
+                    format='%(asctime)s - %(levelname)s - %(message)s')
+
+# Initialize rate limiter
+rate_limiter = RateLimiter()
 
 def random_sleep(min_time=1, max_time=3):
     """Sleep for a random amount of time between min_time and max_time seconds."""
     sleep_time = random.uniform(min_time, max_time)
     logging.info(f"Sleeping for {sleep_time:.2f} seconds.")
-    time.sleep(sleep_time)
+    sleep(sleep_time)
+
+# Setup WebDriver
+logging.info('Initializing Chrome driver')
+driver = webdriver.Chrome()
+driver.get('https://web.whatsapp.com/')
+
+# Wait for QR code scan
+input('Enter anything after scanning QR code')
+logging.info('QR code scanned')
+
+# Define the auto-reply message
+auto_reply_message = "Hello! This is an automated reply from our WhatsApp Business account."
 
 def click_unread_button():
     """Click the 'Unread' button to filter unread chats."""
@@ -48,16 +80,15 @@ def click_unread_button():
         unread_button = driver.find_element(By.XPATH, "//button[@data-tab='4']")
         unread_button.click()
         logging.info("Clicked the 'Unread' button to filter chats.")
-    except NoSuchElementException:
-        logging.error("Unread button not found. Make sure the button's XPath is correct.")
+    except Exception as e:
+        logging.error(f"Error clicking the 'Unread' button: {e}")
 
 def find_unread_chats():
     """Find unread chat elements."""
     try:
-        # Locate unread contacts using the provided class name
         return driver.find_elements(By.XPATH, "//div[@class='_ak8l']")
-    except NoSuchElementException:
-        logging.error("No unread chats found or error in locating unread chats.")
+    except Exception as e:
+        logging.error(f"Error finding unread chats: {e}")
         return []
 
 def reply_to_message(chat):
@@ -68,9 +99,9 @@ def reply_to_message(chat):
         message_box = driver.find_element(By.XPATH, "//div[@title='Type a message']")
         message_box.click()
         message_box.send_keys(auto_reply_message + Keys.ENTER)
-        logging.info("Auto-reply sent to a chat.")
-    except NoSuchElementException as e:
-        logging.error(f"Error while replying to message: {e}")
+        logging.info("Auto-reply sent.")
+    except Exception as e:
+        logging.error(f"Error while sending auto-reply: {e}")
 
 def main():
     """Main function to monitor and auto-reply to messages."""
@@ -89,6 +120,9 @@ def main():
                 logging.info("No new unread messages.")
             
             random_sleep(5, 10)  # Random sleep before checking for new messages again
+
+            # Simulate rate limiting
+            rate_limiter.get_token()
 
     except KeyboardInterrupt:
         logging.info("Exiting...")
