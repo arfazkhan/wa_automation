@@ -12,16 +12,13 @@ import csv
 import logging
 import random
 import threading
-import atexit
-import pickle
+import os
+import json
 from time import sleep, time
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from webdriver_manager.chrome import ChromeDriverManager
 
 # Rate limiter settings
 RATE_LIMIT = 200  # 200 tokens per hour
@@ -62,61 +59,55 @@ logging.basicConfig(filename='whatsapp_auto_reply.log', level=logging.INFO,
 # Initialize rate limiter
 rate_limiter = RateLimiter()
 
+# Define paths for cookies and contact files
+cookies_file = 'whatsapp_cookies.json'
+unread_contacts_file = 'unread_contacts.csv'
+
+def save_cookies(driver):
+    """Save cookies to a file."""
+    cookies = driver.get_cookies()
+    with open(cookies_file, 'w') as file:
+        json.dump(cookies, file)
+    logging.info('Cookies saved to file.')
+
+def load_cookies(driver):
+    """Load cookies from a file."""
+    if os.path.exists(cookies_file):
+        with open(cookies_file, 'r') as file:
+            cookies = json.load(file)
+            for cookie in cookies:
+                driver.add_cookie(cookie)
+        logging.info('Cookies loaded from file.')
+    else:
+        logging.info('No cookies file found. Proceeding without loading cookies.')
+
 def random_sleep(min_time=1, max_time=3):
     """Sleep for a random amount of time between min_time and max_time seconds."""
     sleep_time = random.uniform(min_time, max_time)
     logging.info(f"Sleeping for {sleep_time:.2f} seconds.")
     sleep(sleep_time)
 
-def initialize_driver():
-    """Initialize the Chrome WebDriver and open WhatsApp Web."""
-    try:
-        logging.info('Initializing Chrome driver')
-        options = Options()
-        options.add_argument("--user-data-dir=./User_Data")  # Path to save user data
-        options.add_argument("--profile-directory=Default")  # Use default profile
-        driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
-        driver.get('https://web.whatsapp.com/')
-        
-        # Load cookies if they exist
-        try:
-            with open('whatsapp_cookies.pkl', 'rb') as cookies_file:
-                cookies = pickle.load(cookies_file)
-                for cookie in cookies:
-                    driver.add_cookie(cookie)
-            driver.refresh()
-            logging.info('Loaded cookies and refreshed page.')
-        except FileNotFoundError:
-            logging.info('No cookies found. Please scan the QR code.')
+# Setup WebDriver
+logging.info('Initializing Chrome driver')
+driver = webdriver.Chrome()
+driver.get('https://web.whatsapp.com/')
 
-        return driver
-    except Exception as e:
-        logging.error(f"Error initializing Chrome driver: {e}")
-        raise
+# Load cookies to maintain session
+load_cookies(driver)
 
-def wait_for_qr_scan(driver):
-    """Wait for the QR code to be scanned by the user."""
-    try:
-        # If cookies were not loaded, prompt the user to scan QR code
-        if not driver.get_cookies():
-            input('Enter anything after scanning QR code')
-            logging.info('QR code scanned successfully.')
-            # Save cookies after successful login
-            cookies = driver.get_cookies()
-            with open('whatsapp_cookies.pkl', 'wb') as cookies_file:
-                pickle.dump(cookies, cookies_file)
-            logging.info('Cookies saved.')
-    except Exception as e:
-        logging.error(f"Error waiting for QR code scan: {e}")
-        raise
+# Refresh the page to apply cookies
+driver.refresh()
+
+# Wait for QR code scan if cookies are not available
+if not os.path.exists(cookies_file):
+    input('Enter anything after scanning QR code')
+    save_cookies(driver)  # Save cookies after scanning QR code
+    logging.info('QR code scanned and cookies saved.')
 
 # Define the auto-reply message
 auto_reply_message = "Hello! This is an automated reply from our WhatsApp Business account."
 
-unread_contacts = []  # List to store unread contact info
-processed_contacts = set()  # Set to track processed contacts
-
-def click_unread_button(driver):
+def click_unread_button():
     """Click the 'Unread' button to filter unread chats."""
     try:
         unread_button = driver.find_element(By.XPATH, "//button[@data-tab='4']")
@@ -125,7 +116,7 @@ def click_unread_button(driver):
     except Exception as e:
         logging.error(f"Error clicking the 'Unread' button: {e}")
 
-def find_unread_chats(driver):
+def find_unread_chats():
     """Find unread chat elements."""
     try:
         return driver.find_elements(By.XPATH, "//div[@class='_ak8l']")
@@ -139,7 +130,7 @@ def get_contact_number(chat):
         chat.click()
         random_sleep(1, 2)  # Random sleep to simulate human behavior
 
-        # Extract the contact number (update the XPath if needed)
+        # Extract the contact number
         contact_number_element = WebDriverWait(driver, 10).until(
             EC.presence_of_element_located(
                 (By.XPATH, "//span[contains(@class, 'x1iyjqo2') and contains(@class, 'x6ikm8r') and contains(@class, 'x10wlt62')]")
@@ -181,68 +172,51 @@ def reply_to_message(chat):
     except Exception as e:
         logging.error(f"Error while sending auto-reply: {e}")
 
-def save_unread_contacts():
+def save_unread_contacts(contacts):
     """Save unread contact information to a CSV file."""
-    try:
-        with open('unread_contacts.csv', 'w', newline='') as file:
-            writer = csv.writer(file)
-            writer.writerow(['Contact Number'])
-            for contact in unread_contacts:
-                writer.writerow([contact])
-        logging.info("Unread contacts saved to 'unread_contacts.csv'.")
-    except Exception as e:
-        logging.error(f"Error saving contacts to CSV: {e}")
-
-def cleanup():
-    """Cleanup function to save contacts and close WebDriver."""
-    try:
-        save_unread_contacts()
-    except Exception as e:
-        logging.error(f"Error during cleanup while saving contacts: {e}")
-    finally:
-        try:
-            driver.quit()
-            logging.info("Closed WebDriver.")
-        except Exception as e:
-            logging.error(f"Error closing WebDriver: {e}")
-
-# Register the cleanup function to run on exit
-atexit.register(cleanup)
+    with open(unread_contacts_file, 'w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(['Contact Number'])
+        for contact in contacts:
+            writer.writerow([contact])
+    logging.info(f"Unread contacts saved to '{unread_contacts_file}'.")
 
 def main():
     """Main function to monitor and auto-reply to messages."""
+    unread_contacts = []  # List to store unread contact info
     try:
-        global driver
-        driver = initialize_driver()
-        wait_for_qr_scan(driver)
-
         while True:
-            try:
-                click_unread_button(driver)  # Filter unread messages
-                random_sleep(2, 4)  # Random sleep after clicking the 'Unread' button
-                
-                unread_chats = find_unread_chats(driver)
-                if unread_chats:
-                    logging.info(f"Found {len(unread_chats)} unread chats.")
-                    for chat in unread_chats:
-                        contact_number = get_contact_number(chat)
-                        if contact_number and contact_number not in processed_contacts:
-                            unread_contacts.append(contact_number)
-                            processed_contacts.add(contact_number)
-                            reply_to_message(chat)
-                            random_sleep(1, 3)  # Random sleep between replying to different chats
-                else:
-                    logging.info("No new unread messages.")
-                
-                random_sleep(5, 10)  # Random sleep before checking for new messages again
+            click_unread_button()  # Filter unread messages
+            random_sleep(2, 4)  # Random sleep after clicking the 'Unread' button
+            
+            unread_chats = find_unread_chats()
+            if unread_chats:
+                logging.info(f"Found {len(unread_chats)} unread chats.")
+                for chat in unread_chats:
+                    contact_number = get_contact_number(chat)
+                    if contact_number:
+                        unread_contacts.append(contact_number)
+                        reply_to_message(chat)
+                        random_sleep(1, 3)  # Random sleep between replying to different chats
+            
+                # Save unread contacts to CSV
+                save_unread_contacts(unread_contacts)
+            else:
+                logging.info("No new unread messages.")
+            
+            random_sleep(5, 10)  # Random sleep before checking for new messages again
 
-                # Simulate rate limiting
-                rate_limiter.get_token()
-            except Exception as e:
-                logging.error(f"An error occurred during main loop: {e}")
+            # Simulate rate limiting
+            rate_limiter.get_token()
 
+    except KeyboardInterrupt:
+        logging.info("Exiting...")
     except Exception as e:
         logging.error(f"An error occurred: {e}")
+    finally:
+        driver.quit()
+        logging.info("Closed WebDriver.")
+        save_unread_contacts(unread_contacts)  # Save contacts on exit
 
 if __name__ == "__main__":
     main()
