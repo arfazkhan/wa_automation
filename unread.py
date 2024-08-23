@@ -13,6 +13,7 @@ import logging
 import random
 import threading
 import atexit
+import pickle
 from time import sleep, time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -68,19 +69,39 @@ def initialize_driver():
     """Initialize the Chrome WebDriver and open WhatsApp Web."""
     try:
         logging.info('Initializing Chrome driver')
-        driver = webdriver.Chrome()
+        options = webdriver.ChromeOptions()
+        options.add_argument("--user-data-dir=./User_Data")  # Path to save user data
+        driver = webdriver.Chrome(options=options)
         driver.get('https://web.whatsapp.com/')
-        logging.info('Chrome driver initialized and WhatsApp Web opened.')
+        
+        # Load cookies if they exist
+        try:
+            with open('whatsapp_cookies.pkl', 'rb') as cookies_file:
+                cookies = pickle.load(cookies_file)
+                for cookie in cookies:
+                    driver.add_cookie(cookie)
+            driver.refresh()
+            logging.info('Loaded cookies and refreshed page.')
+        except FileNotFoundError:
+            logging.info('No cookies found. Please scan the QR code.')
+
         return driver
     except Exception as e:
         logging.error(f"Error initializing Chrome driver: {e}")
         raise
 
-def wait_for_qr_scan():
+def wait_for_qr_scan(driver):
     """Wait for the QR code to be scanned by the user."""
     try:
-        input('Enter anything after scanning QR code')
-        logging.info('QR code scanned successfully.')
+        # If cookies were not loaded, prompt the user to scan QR code
+        if not driver.get_cookies():
+            input('Enter anything after scanning QR code')
+            logging.info('QR code scanned successfully.')
+            # Save cookies after successful login
+            cookies = driver.get_cookies()
+            with open('whatsapp_cookies.pkl', 'wb') as cookies_file:
+                pickle.dump(cookies, cookies_file)
+            logging.info('Cookies saved.')
     except Exception as e:
         logging.error(f"Error waiting for QR code scan: {e}")
         raise
@@ -91,7 +112,7 @@ auto_reply_message = "Hello! This is an automated reply from our WhatsApp Busine
 unread_contacts = []  # List to store unread contact info
 processed_contacts = set()  # Set to track processed contacts
 
-def click_unread_button():
+def click_unread_button(driver):
     """Click the 'Unread' button to filter unread chats."""
     try:
         unread_button = driver.find_element(By.XPATH, "//button[@data-tab='4']")
@@ -100,7 +121,7 @@ def click_unread_button():
     except Exception as e:
         logging.error(f"Error clicking the 'Unread' button: {e}")
 
-def find_unread_chats():
+def find_unread_chats(driver):
     """Find unread chat elements."""
     try:
         return driver.find_elements(By.XPATH, "//div[@class='_ak8l']")
@@ -189,14 +210,14 @@ def main():
     try:
         global driver
         driver = initialize_driver()
-        wait_for_qr_scan()
+        wait_for_qr_scan(driver)
 
         while True:
             try:
-                click_unread_button()  # Filter unread messages
+                click_unread_button(driver)  # Filter unread messages
                 random_sleep(2, 4)  # Random sleep after clicking the 'Unread' button
                 
-                unread_chats = find_unread_chats()
+                unread_chats = find_unread_chats(driver)
                 if unread_chats:
                     logging.info(f"Found {len(unread_chats)} unread chats.")
                     for chat in unread_chats:
