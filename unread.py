@@ -12,6 +12,7 @@ import csv
 import logging
 import random
 import threading
+import atexit
 from time import sleep, time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -74,6 +75,9 @@ logging.info('QR code scanned')
 
 # Define the auto-reply message
 auto_reply_message = "Hello! This is an automated reply from our WhatsApp Business account."
+
+unread_contacts = []  # List to store unread contact info
+processed_contacts = set()  # Set to track processed contacts
 
 def click_unread_button():
     """Click the 'Unread' button to filter unread chats."""
@@ -140,18 +144,26 @@ def reply_to_message(chat):
     except Exception as e:
         logging.error(f"Error while sending auto-reply: {e}")
 
-def save_unread_contacts(contacts):
+def save_unread_contacts():
     """Save unread contact information to a CSV file."""
     with open('unread_contacts.csv', 'w', newline='') as file:
         writer = csv.writer(file)
         writer.writerow(['Contact Number'])
-        for contact in contacts:
+        for contact in unread_contacts:
             writer.writerow([contact])
     logging.info("Unread contacts saved to 'unread_contacts.csv'.")
 
+def cleanup():
+    """Cleanup function to save contacts and close WebDriver."""
+    save_unread_contacts()
+    driver.quit()
+    logging.info("Closed WebDriver and saved contacts.")
+
+# Register the cleanup function to run on exit
+atexit.register(cleanup)
+
 def main():
     """Main function to monitor and auto-reply to messages."""
-    unread_contacts = []  # List to store unread contact info
     try:
         while True:
             click_unread_button()  # Filter unread messages
@@ -162,13 +174,12 @@ def main():
                 logging.info(f"Found {len(unread_chats)} unread chats.")
                 for chat in unread_chats:
                     contact_number = get_contact_number(chat)
-                    if contact_number:
+                    if contact_number and contact_number not in processed_contacts:
                         unread_contacts.append(contact_number)
+                        processed_contacts.add(contact_number)
                         reply_to_message(chat)
                         random_sleep(1, 3)  # Random sleep between replying to different chats
             
-                # Save unread contacts to CSV
-                save_unread_contacts(unread_contacts)
             else:
                 logging.info("No new unread messages.")
             
@@ -181,9 +192,6 @@ def main():
         logging.info("Exiting...")
     except Exception as e:
         logging.error(f"An error occurred: {e}")
-    finally:
-        driver.quit()
-        logging.info("Closed WebDriver.")
 
 if __name__ == "__main__":
     main()
