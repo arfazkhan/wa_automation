@@ -39,3 +39,29 @@
 2024-08-22 02:39:08,139 - INFO - Total successful sends: 2
 2024-08-22 02:39:08,139 - INFO - Total failed sends: 1
 2024-08-22 02:39:08,139 - INFO - Closing the browser
+
+new
+
+
+2024-08-23 11:15:30,780 - INFO - RateLimiter initialized with 200 tokens and last reset at 1724391930.7808988
+2024-08-23 11:15:30,780 - INFO - Initializing Chrome driver
+2024-08-23 11:16:58,793 - INFO - QR code scanned
+2024-08-23 11:16:58,796 - INFO - Reading contact: Arfaz, 919048057376
+2024-08-23 11:16:58,796 - INFO - Validating number: 919048057376
+2024-08-23 11:16:58,797 - INFO - Number is a valid Indian number
+2024-08-23 11:17:10,679 - INFO - Opened chat for contact: Arfaz
+2024-08-23 11:17:10,989 - INFO - Attachment box clicked
+2024-08-23 11:17:11,173 - INFO - Document option clicked
+2024-08-23 11:17:13,289 - INFO - PDF file selected through file input
+2024-08-23 11:17:21,372 - INFO - Message sent to contact: Arfaz
+2024-08-23 11:17:24,652 - INFO - Message sent and confirmed for contact: Arfaz
+2024-08-23 11:17:24,652 - INFO - Time taken for contact Arfaz: 25.85 seconds
+2024-08-23 11:17:24,652 - INFO - Token acquired. Remaining tokens: 199
+2024-08-23 11:17:24,652 - INFO - Reading contact: ashaz, 9048057376
+2024-08-23 11:17:24,652 - INFO - Validating number: 9048057376
+2024-08-23 11:17:24,652 - INFO - Number is a valid Indian number
+2024-08-23 11:17:24,652 - INFO - Skipping duplicate contact: ashaz (919048057376)
+2024-08-23 11:17:24,652 - INFO - Total time taken for the process: 25.86 seconds
+2024-08-23 11:17:24,652 - INFO - Successfully sent messages: 1
+2024-08-23 11:17:24,652 - INFO - Failed messages: 0
+2024-08-23 11:17:27,087 - INFO - Browser closed

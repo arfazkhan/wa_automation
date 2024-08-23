@@ -21,9 +21,9 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 # Rate limiter settings
-RATE_LIMIT = 200 # 200 tokens per hour
-TIME_WINDOW = 3600 # 1 hour
-COOL_DOWN = 600 # 10 minutes
+RATE_LIMIT = 200  # 200 tokens per hour
+TIME_WINDOW = 3600  # 1 hour
+COOL_DOWN = 600  # 10 minutes
 
 class RateLimiter:
     def __init__(self):
@@ -111,11 +111,28 @@ failure_count = 0
 # CSV file to store failed contacts
 failed_contacts_file = 'failed_contacts.csv'
 
-# Open the failed contacts CSV file in write mode
-with open(failed_contacts_file, 'w', newline='') as failed_file:
+# CSV file to store sent contacts
+sent_contacts_file = 'sent_contacts.csv'
+
+# Load sent contacts from CSV into a set
+sent_contacts = set()
+if os.path.exists(sent_contacts_file):
+    with open(sent_contacts_file, 'r') as sc_file:
+        reader = csv.reader(sc_file)
+        for row in reader:
+            if row:
+                sent_contacts.add(row[0])
+
+# Open the failed contacts CSV file in write mode and sent contacts in append mode
+with open(failed_contacts_file, 'w', newline='') as failed_file, \
+     open(sent_contacts_file, 'a', newline='') as sc_file:
+
     failed_writer = csv.writer(failed_file)
-    # Write the header
-    failed_writer.writerow(['Name', 'Number'])
+    sent_writer = csv.writer(sc_file)
+
+    # Write the header for failed contacts if not already written
+    if os.stat(failed_contacts_file).st_size == 0:
+        failed_writer.writerow(['Name', 'Number'])
 
     # Read the input CSV file
     with open('contacts.csv', 'r') as file:
@@ -147,6 +164,15 @@ with open(failed_contacts_file, 'w', newline='') as failed_file:
                     # Write failed contact to CSV
                     failed_writer.writerow([name, number])
                     continue
+
+                # Check if the contact has already received the message
+                if formatted_number in sent_contacts:
+                    logging.info(f'Skipping duplicate contact: {name} ({formatted_number})')
+                    continue
+
+                # Add the contact to the set of sent contacts and CSV
+                sent_contacts.add(formatted_number)
+                sent_writer.writerow([formatted_number])
 
                 # Start time tracking for the individual contact
                 start_time = time()
@@ -214,51 +240,48 @@ with open(failed_contacts_file, 'w', newline='') as failed_file:
                         logging.info(f'Message sent and confirmed for contact: {name}')
                         success_count += 1  # Increment success counter
                     except Exception as e:
-                        logging.error(f'Failed to confirm message sent for contact {name} ({number}): {e}')
+                        logging.error(f'Failed to confirm message sent for contact {name}: {e}')
                         failure_count += 1  # Increment failure counter
                         # Write failed contact to CSV
                         failed_writer.writerow([name, number])
-
-                    # Add random delay to mimic human nature
-                    delay = random.randint(5, 20)
-                    sleep(delay)
-                    logging.info(f'Random delay of {delay} seconds before moving to next contact.')
+                        continue
 
                 except Exception as e:
-                    logging.error(f'Failed to attach PDF or send message for contact {name} ({number}): {e}')
+                    logging.error(f'Error while sending message to {name}: {e}')
                     failure_count += 1  # Increment failure counter
                     # Write failed contact to CSV
                     failed_writer.writerow([name, number])
+                    continue
 
-                # Log the time taken for the individual contact
+                # End time tracking for the individual contact
                 end_time = time()
                 time_taken = end_time - start_time
-                logging.info(f'Time taken for sending to contact {name}: {time_taken:.2f} seconds')
+                logging.info(f'Time taken for contact {name}: {time_taken:.2f} seconds')
 
-                # Rate limiting
+                # Simulate rate limiting
                 rate_limiter.get_token()
 
             except ValueError as e:
                 logging.error(f'Error reading contact: {e}')
+                # Write bad row to CSV
                 with open('bad.csv', 'a', newline='') as bad_file:
                     bad_writer = csv.writer(bad_file)
                     bad_writer.writerow(row)
 
             except Exception as e:
                 logging.error(f'Unexpected error reading contact: {e}')
+                # Write error row to CSV
                 with open('error.csv', 'a', newline='') as error_file:
                     error_writer = csv.writer(error_file)
                     error_writer.writerow(row)
 
-# Log the total time taken
+# Log total time taken
 total_end_time = time()
 total_time_taken = total_end_time - total_start_time
-logging.info(f'Total time taken for sending messages: {total_time_taken:.2f} seconds')
-
-# Log the success and failure counts
-logging.info(f'Total successful sends: {success_count}')
-logging.info(f'Total failed sends: {failure_count}')
+logging.info(f'Total time taken for the process: {total_time_taken:.2f} seconds')
+logging.info(f'Successfully sent messages: {success_count}')
+logging.info(f'Failed messages: {failure_count}')
 
 # Close the browser
-logging.info('Closing the browser')
 driver.quit()
+logging.info('Browser closed')
