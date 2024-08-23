@@ -16,9 +16,12 @@ import atexit
 import pickle
 from time import sleep, time
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from webdriver_manager.chrome import ChromeDriverManager
 
 # Rate limiter settings
 RATE_LIMIT = 200  # 200 tokens per hour
@@ -69,9 +72,10 @@ def initialize_driver():
     """Initialize the Chrome WebDriver and open WhatsApp Web."""
     try:
         logging.info('Initializing Chrome driver')
-        options = webdriver.ChromeOptions()
+        options = Options()
         options.add_argument("--user-data-dir=./User_Data")  # Path to save user data
-        driver = webdriver.Chrome(options=options)
+        options.add_argument("--profile-directory=Default")  # Use default profile
+        driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
         driver.get('https://web.whatsapp.com/')
         
         # Load cookies if they exist
@@ -234,14 +238,11 @@ def main():
 
                 # Simulate rate limiting
                 rate_limiter.get_token()
-
             except Exception as e:
-                logging.error(f"Error in main loop: {e}")
+                logging.error(f"An error occurred during main loop: {e}")
 
-    except KeyboardInterrupt:
-        logging.info("Exiting due to keyboard interrupt.")
     except Exception as e:
-        logging.error(f"An error occurred in main function: {e}")
+        logging.error(f"An error occurred: {e}")
 
 if __name__ == "__main__":
     main()
