@@ -107,25 +107,22 @@ if not os.path.exists(cookies_file):
 # Define the auto-reply message
 auto_reply_message = "Hello! This is an automated reply from our WhatsApp Business account."
 
-def click_unread_button():
-    """Click the 'Unread' button to filter unread chats."""
+def find_unread_message_badge():
+    """Find unread message badge elements."""
     try:
-        unread_button = driver.find_element(By.XPATH, "//button[@data-tab='4']")
-        unread_button.click()
-        logging.info("Clicked the 'Unread' button to filter chats.")
+        # Find all badges indicating unread messages
+        badges = driver.find_elements(By.XPATH, "//span[contains(@class, 'x1rg5ohu') and contains(@aria-label, 'unread message')]")
+        if badges:
+            logging.info(f"Found {len(badges)} unread message badges.")
+        else:
+            logging.info("No unread message badges found.")
+        return badges
     except Exception as e:
-        logging.error(f"Error clicking the 'Unread' button: {e}")
-
-def find_unread_chats():
-    """Find unread chat elements."""
-    try:
-        return driver.find_elements(By.XPATH, "//div[@class='_ak8l']")
-    except Exception as e:
-        logging.error(f"Error finding unread chats: {e}")
+        logging.error(f"Error finding unread message badges: {e}")
         return []
 
-def get_contact_number(chat):
-    """Extract contact number from the unread chat element."""
+def get_contact_number_from_chat(chat):
+    """Extract contact number from the specific chat element."""
     try:
         chat.click()
         random_sleep(1, 2)  # Random sleep to simulate human behavior
@@ -144,12 +141,9 @@ def get_contact_number(chat):
         logging.error(f"Error extracting contact number: {e}")
         return None
 
-def reply_to_message(chat):
-    """Click on chat, type the reply message, and send it."""
+def reply_to_message():
+    """Type the reply message and send it."""
     try:
-        chat.click()
-        random_sleep(1, 2)  # Random sleep to simulate human behavior
-        
         # Locate the message input field
         message_box = WebDriverWait(driver, 10).until(
             EC.presence_of_element_located(
@@ -186,19 +180,18 @@ def main():
     unread_contacts = []  # List to store unread contact info
     try:
         while True:
-            click_unread_button()  # Filter unread messages
-            random_sleep(2, 4)  # Random sleep after clicking the 'Unread' button
-            
-            unread_chats = find_unread_chats()
-            if unread_chats:
-                logging.info(f"Found {len(unread_chats)} unread chats.")
-                for chat in unread_chats:
-                    contact_number = get_contact_number(chat)
+            unread_badges = find_unread_message_badge()
+            if unread_badges:
+                for badge in unread_badges:
+                    badge.click()
+                    random_sleep(1, 2)  # Random sleep to simulate human behavior
+
+                    contact_number = get_contact_number_from_chat(driver)
                     if contact_number:
                         unread_contacts.append(contact_number)
-                        reply_to_message(chat)
+                        reply_to_message()
                         random_sleep(1, 3)  # Random sleep between replying to different chats
-            
+
                 # Save unread contacts to CSV
                 save_unread_contacts(unread_contacts)
             else:
