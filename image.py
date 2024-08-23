@@ -25,7 +25,6 @@ RATE_LIMIT = 200  # 200 tokens per hour
 TIME_WINDOW = 3600  # 1 hour
 COOL_DOWN = 600  # 10 minutes
 
-
 class RateLimiter:
     def __init__(self):
         self.tokens = RATE_LIMIT
@@ -53,14 +52,12 @@ class RateLimiter:
             self.tokens -= 1
             logging.info(f'Token acquired. Remaining tokens: {self.tokens}')
 
-
 # Setup logging
 logging.basicConfig(filename='whatsapp_automation.log', level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Initialize rate limiter
 rate_limiter = RateLimiter()
-
 
 def validate_and_format_number(number):
     logging.info(f'Validating number: {number}')
@@ -87,7 +84,6 @@ def validate_and_format_number(number):
     logging.warning(f'Number format not recognized after cleaning: {number}')
     return None
 
-
 # Setup WebDriver
 logging.info('Initializing Chrome driver')
 driver = webdriver.Chrome()
@@ -112,8 +108,18 @@ total_start_time = time()
 success_count = 0
 failure_count = 0
 
-# CSV file to store failed contacts
+# Files for tracking sent and failed contacts
+sent_contacts_file = 'sent_contacts.csv'
 failed_contacts_file = 'failed_contacts.csv'
+
+# Load sent contacts to avoid duplicate messages
+sent_contacts = set()
+if os.path.exists(sent_contacts_file):
+    with open(sent_contacts_file, 'r') as file:
+        reader = csv.reader(file)
+        for row in reader:
+            if row:
+                sent_contacts.add(row[0])  # Add the number to the set
 
 # Open the failed contacts CSV file in write mode
 with open(failed_contacts_file, 'w', newline='') as failed_file:
@@ -150,6 +156,11 @@ with open(failed_contacts_file, 'w', newline='') as failed_file:
                     failure_count += 1  # Increment failure counter
                     # Write failed contact to CSV
                     failed_writer.writerow([name, number])
+                    continue
+
+                # Skip already sent contacts
+                if formatted_number in sent_contacts:
+                    logging.info(f'Contact {name} ({formatted_number}) already sent. Skipping.')
                     continue
 
                 # Start time tracking for the individual contact
@@ -217,6 +228,13 @@ with open(failed_contacts_file, 'w', newline='') as failed_file:
                         )
                         logging.info(f'Message sent and confirmed for contact: {name}')
                         success_count += 1  # Increment success counter
+                        
+                        # Add contact to sent contacts
+                        sent_contacts.add(formatted_number)
+                        with open(sent_contacts_file, 'a', newline='') as sent_file:
+                            sent_writer = csv.writer(sent_file)
+                            sent_writer.writerow([formatted_number])  # Save only the number
+
                     except Exception as e:
                         logging.error(f'Failed to confirm message sent for contact {name} ({number}): {e}')
                         failure_count += 1  # Increment failure counter
