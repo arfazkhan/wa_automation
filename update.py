@@ -82,7 +82,7 @@ def detect_header(file_path):
 
 if __name__ == "__main__":
     contacts_file = 'contacts.csv'
-    failed_file = 'failed_contacts.csv'
+    failed_file = 'failed_contact.csv'
     output_file = 'updated_contacts.csv'
 
     if not Path(contacts_file).exists():

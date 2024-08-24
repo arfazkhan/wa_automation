@@ -1,0 +1,161 @@
+2024-08-24 03:42:39,151 - INFO - RateLimiter initialized with 200 tokens and last reset at 1724451159.1512156
+2024-08-24 03:42:39,151 - INFO - Initializing Chrome driver
+2024-08-24 03:42:39,428 - WARNING - The chromedriver version (127.0.6533.119) detected in PATH at chromedriver.EXE might not be compatible with the detected chrome version (128.0.6613.84); currently, chromedriver 128.0.6613.84 is recommended for chrome 128.*, so it is advised to delete the driver in PATH and retry
+2024-08-24 03:42:43,996 - INFO - Cookies loaded from file.
+2024-08-24 03:42:45,531 - INFO - Sleeping for 2.84 seconds.
+2024-08-24 03:42:48,396 - INFO - No new unread messages.
+2024-08-24 03:42:48,397 - INFO - Sleeping for 8.55 seconds.
+2024-08-24 03:42:56,943 - INFO - Token acquired. Remaining tokens: 199
+2024-08-24 03:42:56,943 - INFO - Sleeping for 3.95 seconds.
+2024-08-24 03:43:02,102 - INFO - Found 40 unread chats.
+2024-08-24 03:43:02,157 - INFO - Sleeping for 1.14 seconds.
+2024-08-24 03:43:03,317 - INFO - Contact number extracted: Arfoo-2022
+2024-08-24 03:43:03,335 - INFO - Sleeping for 1.65 seconds.
+2024-08-24 03:43:15,242 - ERROR - Error while sending auto-reply: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF6FAA89642+30946]
+	(No symbol) [0x00007FF6FAA3E3D9]
+	(No symbol) [0x00007FF6FA936FDA]
+	(No symbol) [0x00007FF6FA98822C]
+	(No symbol) [0x00007FF6FA98850C]
+	(No symbol) [0x00007FF6FA9CDCB7]
+	(No symbol) [0x00007FF6FA9ACAAF]
+	(No symbol) [0x00007FF6FA9CB041]
+	(No symbol) [0x00007FF6FA9AC813]
+	(No symbol) [0x00007FF6FA97A6E5]
+	(No symbol) [0x00007FF6FA97B021]
+	GetHandleVerifier [0x00007FF6FABBF84D+1301229]
+	GetHandleVerifier [0x00007FF6FABCBDC7+1351783]
+	GetHandleVerifier [0x00007FF6FABC2A13+1313971]
+	GetHandleVerifier [0x00007FF6FAABDD16+245686]
+	(No symbol) [0x00007FF6FAA4759F]
+	(No symbol) [0x00007FF6FAA43814]
+	(No symbol) [0x00007FF6FAA439A2]
+	(No symbol) [0x00007FF6FAA3A3FF]
+	BaseThreadInitThunk [0x00007FFEB61B257D+29]
+	RtlUserThreadStart [0x00007FFEB770AF28+40]
+
+2024-08-24 03:43:15,242 - INFO - Sleeping for 2.58 seconds.
+2024-08-24 03:43:18,302 - INFO - Sleeping for 1.05 seconds.
+2024-08-24 03:43:19,386 - INFO - Contact number extracted: Arfoo-2022
+2024-08-24 03:43:19,421 - INFO - Sleeping for 1.02 seconds.
+2024-08-24 03:43:20,775 - INFO - Sleeping for 1.51 seconds.
+2024-08-24 03:43:22,515 - INFO - Auto-reply sent.
+2024-08-24 03:43:22,515 - INFO - Sleeping for 1.71 seconds.
+2024-08-24 03:43:24,243 - ERROR - Error extracting contact number: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=128.0.6613.84); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF6FAA89642+30946]
+	(No symbol) [0x00007FF6FAA3E3D9]
+	(No symbol) [0x00007FF6FA936FDA]
+	(No symbol) [0x00007FF6FA93DA57]
+	(No symbol) [0x00007FF6FA93FD31]
+	(No symbol) [0x00007FF6FA93FDD0]
+	(No symbol) [0x00007FF6FA98A3AB]
+	(No symbol) [0x00007FF6FA97C126]
+	(No symbol) [0x00007FF6FA9ACA6A]
+	(No symbol) [0x00007FF6FA97BBB6]
+	(No symbol) [0x00007FF6FA9ACC80]
+	(No symbol) [0x00007FF6FA9CB041]
+	(No symbol) [0x00007FF6FA9AC813]
+	(No symbol) [0x00007FF6FA97A6E5]
+	(No symbol) [0x00007FF6FA97B021]
+	GetHandleVerifier [0x00007FF6FABBF84D+1301229]
+	GetHandleVerifier [0x00007FF6FABCBDC7+1351783]
+	GetHandleVerifier [0x00007FF6FABC2A13+1313971]
+	GetHandleVerifier [0x00007FF6FAABDD16+245686]
+	(No symbol) [0x00007FF6FAA4759F]
+	(No symbol) [0x00007FF6FAA43814]
+	(No symbol) [0x00007FF6FAA439A2]
+	(No symbol) [0x00007FF6FAA3A3FF]
+	BaseThreadInitThunk [0x00007FFEB61B257D+29]
+	RtlUserThreadStart [0x00007FFEB770AF28+40]
+
+2024-08-24 03:43:25,290 - ERROR - Error extracting contact number: Message: element click intercepted: Element <span dir="auto" title="..." aria-label="" class="x1iyjqo2 x6ikm8r x10wlt62 x1n2onr6 xlyipyv xuxw1ft x1rg5ohu _ao3e" style="min-height: 0px;">Dad</span> is not clickable at point (152, 801). Other element would receive the click: <div class="x1c4vz4f xs83m0k xdl72j9 x1g77sc7 xozqiw3 x1oa3qoh x12fk4p8 xeuugli x2lwn1j xaw8158 x1q0g3np x6s0dn4 x182zwpg x3nfvp2">...</div>
+  (Session info: chrome=128.0.6613.84)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6FAA89642+30946]
+	(No symbol) [0x00007FF6FAA3E3D9]
+	(No symbol) [0x00007FF6FA936FDA]
+	(No symbol) [0x00007FF6FA98FEEE]
+	(No symbol) [0x00007FF6FA98D962]
+	(No symbol) [0x00007FF6FA98AE7B]
+	(No symbol) [0x00007FF6FA98A095]
+	(No symbol) [0x00007FF6FA97C271]
+	(No symbol) [0x00007FF6FA9ACA6A]
+	(No symbol) [0x00007FF6FA97BBB6]
+	(No symbol) [0x00007FF6FA9ACC80]
+	(No symbol) [0x00007FF6FA9CB041]
+	(No symbol) [0x00007FF6FA9AC813]
+	(No symbol) [0x00007FF6FA97A6E5]
+	(No symbol) [0x00007FF6FA97B021]
+	GetHandleVerifier [0x00007FF6FABBF84D+1301229]
+	GetHandleVerifier [0x00007FF6FABCBDC7+1351783]
+	GetHandleVerifier [0x00007FF6FABC2A13+1313971]
+	GetHandleVerifier [0x00007FF6FAABDD16+245686]
+	(No symbol) [0x00007FF6FAA4759F]
+	(No symbol) [0x00007FF6FAA43814]
+	(No symbol) [0x00007FF6FAA439A2]
+	(No symbol) [0x00007FF6FAA3A3FF]
+	BaseThreadInitThunk [0x00007FFEB61B257D+29]
+	RtlUserThreadStart [0x00007FFEB770AF28+40]
+
+2024-08-24 03:43:26,392 - ERROR - Error extracting contact number: Message: element click intercepted: Element <span dir="ltr" aria-label="" class="x1iyjqo2 x6ikm8r x10wlt62 x1n2onr6 xlyipyv xuxw1ft x1rg5ohu _ao3e" style="min-height: 0px;">...</span> is not clickable at point (268, 802). Other element would receive the click: <div class="x1c4vz4f xs83m0k xdl72j9 x1g77sc7 x78zum5 xozqiw3 x1oa3qoh x12fk4p8 xeuugli x2lwn1j x1qughib x1q0g3np x6s0dn4 xz9dl7a x1a8lsjc x10l6tqk x1ey2m1c xoz0ns6 xh8yej3 x150wa6m x178xt8z x13fuv20 xyj1x25" style="">...</div>
+  (Session info: chrome=128.0.6613.84)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6FAA89642+30946]
+	(No symbol) [0x00007FF6FAA3E3D9]
+	(No symbol) [0x00007FF6FA936FDA]
+	(No symbol) [0x00007FF6FA98FEEE]
+	(No symbol) [0x00007FF6FA98D962]
+	(No symbol) [0x00007FF6FA98AE7B]
+	(No symbol) [0x00007FF6FA98A095]
+	(No symbol) [0x00007FF6FA97C271]
+	(No symbol) [0x00007FF6FA9ACA6A]
+	(No symbol) [0x00007FF6FA97BBB6]
+	(No symbol) [0x00007FF6FA9ACC80]
+	(No symbol) [0x00007FF6FA9CB041]
+	(No symbol) [0x00007FF6FA9AC813]
+	(No symbol) [0x00007FF6FA97A6E5]
+	(No symbol) [0x00007FF6FA97B021]
+	GetHandleVerifier [0x00007FF6FABBF84D+1301229]
+	GetHandleVerifier [0x00007FF6FABCBDC7+1351783]
+	GetHandleVerifier [0x00007FF6FABC2A13+1313971]
+	GetHandleVerifier [0x00007FF6FAABDD16+245686]
+	(No symbol) [0x00007FF6FAA4759F]
+	(No symbol) [0x00007FF6FAA43814]
+	(No symbol) [0x00007FF6FAA439A2]
+	(No symbol) [0x00007FF6FAA3A3FF]
+	BaseThreadInitThunk [0x00007FFEB61B257D+29]
+	RtlUserThreadStart [0x00007FFEB770AF28+40]
+
+2024-08-24 03:43:26,489 - INFO - Sleeping for 1.94 seconds.
+2024-08-24 03:43:28,455 - INFO - Contact number extracted: Arfoo-2022
+2024-08-24 03:43:28,479 - INFO - Sleeping for 1.71 seconds.
+2024-08-24 03:43:30,462 - INFO - Sleeping for 1.56 seconds.
+2024-08-24 03:43:32,105 - INFO - Auto-reply sent.
+2024-08-24 03:43:32,106 - INFO - Sleeping for 2.77 seconds.
+2024-08-24 03:43:33,261 - INFO - Exiting...
+2024-08-24 03:43:33,266 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)': /session/41afbd687402ecbc46385e7fd4e5e56f
+2024-08-24 03:43:37,348 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000211BB316CC0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/41afbd687402ecbc46385e7fd4e5e56f
+2024-08-24 03:43:41,456 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000211BB315DF0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/41afbd687402ecbc46385e7fd4e5e56f
+2024-08-24 03:43:49,723 - INFO - Closed WebDriver.
+2024-08-24 03:43:49,725 - INFO - Unread contacts saved to 'unread_contacts.csv'.
+2024-08-24 03:52:45,175 - INFO - RateLimiter initialized with 200 tokens and last reset at 1724451765.1756265
+2024-08-24 03:52:45,175 - INFO - Initializing Chrome driver
+2024-08-24 03:52:45,449 - WARNING - The chromedriver version (127.0.6533.119) detected in PATH at chromedriver.EXE might not be compatible with the detected chrome version (128.0.6613.84); currently, chromedriver 128.0.6613.84 is recommended for chrome 128.*, so it is advised to delete the driver in PATH and retry
+2024-08-24 03:53:19,513 - INFO - QR code scanned
+2024-08-24 03:53:19,606 - INFO - Clicked the 'Unread' button to filter chats.
+2024-08-24 03:53:19,606 - INFO - Sleeping for 1.68 seconds.
+2024-08-24 03:53:22,778 - INFO - Clicked the 'Unread' button to filter chats.
+2024-08-24 03:53:22,778 - INFO - Sleeping for 1.15 seconds.
+2024-08-24 03:53:24,255 - INFO - Found 20 unread chats.
+2024-08-24 03:53:25,217 - INFO - Sleeping for 1.61 seconds.
+2024-08-24 03:53:27,207 - INFO - Sleeping for 1.80 seconds.
+2024-08-24 03:53:29,085 - INFO - Auto-reply sent.
+2024-08-24 03:53:29,085 - INFO - Sleeping for 1.91 seconds.
+2024-08-24 03:53:29,166 - INFO - Exiting...
+2024-08-24 03:53:29,194 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)': /session/aa7c495d82f2aa4dd76da1ecf666f3b8
+2024-08-24 03:53:33,282 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000026247F0C920>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/aa7c495d82f2aa4dd76da1ecf666f3b8
+2024-08-24 03:53:37,364 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000026247F0C860>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/aa7c495d82f2aa4dd76da1ecf666f3b8
+2024-08-24 03:53:45,642 - INFO - Closed WebDriver.

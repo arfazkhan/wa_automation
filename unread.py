@@ -8,12 +8,9 @@
 # pylint: disable=line-too-long
 # pylint: disable=invalid-name
 
-import csv
 import logging
 import random
 import threading
-import os
-import json
 from time import sleep, time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -59,28 +56,6 @@ logging.basicConfig(filename='whatsapp_auto_reply.log', level=logging.INFO,
 # Initialize rate limiter
 rate_limiter = RateLimiter()
 
-# Define paths for cookies and contact files
-cookies_file = 'whatsapp_cookies.json'
-unread_contacts_file = 'unread_contacts.csv'
-
-def save_cookies(driver):
-    """Save cookies to a file."""
-    cookies = driver.get_cookies()
-    with open(cookies_file, 'w') as file:
-        json.dump(cookies, file)
-    logging.info('Cookies saved to file.')
-
-def load_cookies(driver):
-    """Load cookies from a file."""
-    if os.path.exists(cookies_file):
-        with open(cookies_file, 'r') as file:
-            cookies = json.load(file)
-            for cookie in cookies:
-                driver.add_cookie(cookie)
-        logging.info('Cookies loaded from file.')
-    else:
-        logging.info('No cookies file found. Proceeding without loading cookies.')
-
 def random_sleep(min_time=1, max_time=3):
     """Sleep for a random amount of time between min_time and max_time seconds."""
     sleep_time = random.uniform(min_time, max_time)
@@ -92,58 +67,56 @@ logging.info('Initializing Chrome driver')
 driver = webdriver.Chrome()
 driver.get('https://web.whatsapp.com/')
 
-# Load cookies to maintain session
-load_cookies(driver)
-
-# Refresh the page to apply cookies
-driver.refresh()
-
-# Wait for QR code scan if cookies are not available
-if not os.path.exists(cookies_file):
-    input('Enter anything after scanning QR code')
-    save_cookies(driver)  # Save cookies after scanning QR code
-    logging.info('QR code scanned and cookies saved.')
+# Wait for QR code scan
+input('Enter anything after scanning QR code')
+logging.info('QR code scanned')
 
 # Define the auto-reply message
 auto_reply_message = "Hello! This is an automated reply from our WhatsApp Business account."
 
-def find_unread_message_badge():
-    """Find unread message badge elements."""
+# ... (keep the existing imports and rate limiter code)
+
+def is_unread_button_active():
+    """Check if the 'Unread' button is active."""
     try:
-        # Find all badges indicating unread messages
-        badges = driver.find_elements(By.XPATH, "//span[contains(@class, 'x1rg5ohu') and contains(@aria-label, 'unread message')]")
-        if badges:
-            logging.info(f"Found {len(badges)} unread message badges.")
-        else:
-            logging.info("No unread message badges found.")
-        return badges
+        unread_button = driver.find_element(By.XPATH, "//button[@data-tab='4']")
+        return 'x1qr81dd' in unread_button.get_attribute('class')
     except Exception as e:
-        logging.error(f"Error finding unread message badges: {e}")
+        logging.error(f"Error checking 'Unread' button status: {e}")
+        return False
+
+def click_unread_button():
+    """Click the 'Unread' button to filter unread chats if it's not already active."""
+    if not is_unread_button_active():
+        try:
+            unread_button = driver.find_element(By.XPATH, "//button[@data-tab='4']")
+            unread_button.click()
+            logging.info("Clicked the 'Unread' button to filter chats.")
+            random_sleep(1, 2)  # Wait for the filter to apply
+        except Exception as e:
+            logging.error(f"Error clicking the 'Unread' button: {e}")
+
+def find_unread_chats():
+    """Find unread chat elements, excluding those with the specified icon."""
+    try:
+        all_chats = driver.find_elements(By.XPATH, "//div[contains(@class, '_ak8l')]")
+        unread_chats = []
+        for chat in all_chats:
+            unread_badge = chat.find_elements(By.XPATH, ".//span[contains(@class, 'x1rg5ohu') and @aria-label]")
+            chat_icon = chat.find_elements(By.XPATH, ".//span[@data-icon='chats-filled']")
+            if unread_badge and not chat_icon:
+                unread_chats.append(chat)
+        return unread_chats
+    except Exception as e:
+        logging.error(f"Error finding unread chats: {e}")
         return []
 
-def get_contact_number_from_chat(chat):
-    """Extract contact number from the specific chat element."""
+def reply_to_message(chat):
+    """Click on chat, type the reply message, and send it."""
     try:
         chat.click()
         random_sleep(1, 2)  # Random sleep to simulate human behavior
-
-        # Extract the contact number
-        contact_number_element = WebDriverWait(driver, 10).until(
-            EC.presence_of_element_located(
-                (By.XPATH, "//span[contains(@class, 'x1iyjqo2') and contains(@class, 'x6ikm8r') and contains(@class, 'x10wlt62')]")
-            )
-        )
-        contact_number = contact_number_element.text
-        logging.info(f"Contact number extracted: {contact_number}")
-
-        return contact_number
-    except Exception as e:
-        logging.error(f"Error extracting contact number: {e}")
-        return None
-
-def reply_to_message():
-    """Type the reply message and send it."""
-    try:
+        
         # Locate the message input field
         message_box = WebDriverWait(driver, 10).until(
             EC.presence_of_element_located(
@@ -166,34 +139,20 @@ def reply_to_message():
     except Exception as e:
         logging.error(f"Error while sending auto-reply: {e}")
 
-def save_unread_contacts(contacts):
-    """Save unread contact information to a CSV file."""
-    with open(unread_contacts_file, 'w', newline='') as file:
-        writer = csv.writer(file)
-        writer.writerow(['Contact Number'])
-        for contact in contacts:
-            writer.writerow([contact])
-    logging.info(f"Unread contacts saved to '{unread_contacts_file}'.")
-
 def main():
     """Main function to monitor and auto-reply to messages."""
-    unread_contacts = []  # List to store unread contact info
     try:
+        click_unread_button()  # Initial click to filter unread messages
         while True:
-            unread_badges = find_unread_message_badge()
-            if unread_badges:
-                for badge in unread_badges:
-                    badge.click()
-                    random_sleep(1, 2)  # Random sleep to simulate human behavior
-
-                    contact_number = get_contact_number_from_chat(driver)
-                    if contact_number:
-                        unread_contacts.append(contact_number)
-                        reply_to_message()
-                        random_sleep(1, 3)  # Random sleep between replying to different chats
-
-                # Save unread contacts to CSV
-                save_unread_contacts(unread_contacts)
+            if not is_unread_button_active():
+                click_unread_button()  # Reactivate the filter if it's not active
+            
+            unread_chats = find_unread_chats()
+            if unread_chats:
+                logging.info(f"Found {len(unread_chats)} unread chats.")
+                for chat in unread_chats:
+                    reply_to_message(chat)
+                    random_sleep(1, 3)  # Random sleep between replying to different chats
             else:
                 logging.info("No new unread messages.")
             
@@ -209,7 +168,6 @@ def main():
     finally:
         driver.quit()
         logging.info("Closed WebDriver.")
-        save_unread_contacts(unread_contacts)  # Save contacts on exit
 
 if __name__ == "__main__":
     main()
