@@ -1,8 +1,14 @@
-2024/09/08-04:10:36.288 a920 Reusing MANIFEST C:\Users\ASUS\wa_auto\data\Default\Local Storage\leveldb/MANIFEST-000001
-2024/09/08-04:10:36.292 a920 Recovering log #6
-2024/09/08-04:10:36.292 a920 Level-0 table #8: started
-2024/09/08-04:10:36.295 a920 Level-0 table #8: 15981 bytes OK
-2024/09/08-04:10:36.296 a920 Recovering log #8
-2024/09/08-04:10:36.297 a920 Reusing old log C:\Users\ASUS\wa_auto\data\Default\Local Storage\leveldb/000008.log 
-2024/09/08-04:10:36.298 a920 Delete type=0 #6
-2024/09/08-04:10:36.298 a920 Delete type=2 #9
+2024/09/08-04:18:17.247 8b08 Reusing MANIFEST C:\Users\ASUS\wa_auto\data\Default\Local Storage\leveldb/MANIFEST-000001
+2024/09/08-04:18:17.250 8b08 Recovering log #8
+2024/09/08-04:18:17.251 8b08 Reusing old log C:\Users\ASUS\wa_auto\data\Default\Local Storage\leveldb/000008.log 
+2024/09/08-04:20:17.929 8b08 Level-0 table #11: started
+2024/09/08-04:20:17.933 8b08 Level-0 table #11: 16399 bytes OK
+2024/09/08-04:20:17.937 8b08 Delete type=0 #8
+2024/09/08-04:20:17.937 330c Compacting 4@0 + 0@1 files
+2024/09/08-04:20:17.940 330c Generated table #12@0: 93 keys, 12040 bytes
+2024/09/08-04:20:17.940 330c Compacted 4@0 + 0@1 files => 12040 bytes
+2024/09/08-04:20:17.941 330c compacted to: files[ 0 1 0 0 0 0 0 ]
+2024/09/08-04:20:17.941 330c Delete type=2 #3
+2024/09/08-04:20:17.942 330c Delete type=2 #6
+2024/09/08-04:20:17.942 330c Delete type=2 #8
+2024/09/08-04:20:17.942 330c Delete type=2 #11

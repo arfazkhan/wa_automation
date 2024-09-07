@@ -12,7 +12,6 @@ import csv
 import logging
 import os
 import random
-import re
 import phonenumbers
 import threading
 from time import sleep, time
@@ -61,37 +60,6 @@ logging.basicConfig(filename='whatsapp_automation.log', level=logging.INFO,
 # Initialize rate limiter
 rate_limiter = RateLimiter()
 
-# def validate_and_format_number(number):
-#     logging.info(f'Validating number: {number}')
-#     clean_number = re.sub(r'\D', '', number)  # Remove any non-digit characters
-
-#     # Handle UAE numbers starting with '05'
-#     if clean_number.startswith('05') and len(clean_number) == 10:
-#         clean_number = '971' + clean_number[1:]
-#         logging.info('Number is a valid UAE number')
-#         return clean_number
-
-#     # Remove country codes and prefixes for UAE and India
-#     for prefix in ['971', '00971', '+971', '91', '0091', '+91']:
-#         if clean_number.startswith(prefix):
-#             clean_number = clean_number[len(prefix):]
-
-#     # Add country code if missing for UAE or Indian numbers
-#     if len(clean_number) == 10 and clean_number.startswith(('5', '4')):
-#         clean_number = '971' + clean_number
-#     elif len(clean_number) == 10 and clean_number.startswith(('6', '7', '8', '9')):  # Valid Indian number prefixes
-#         clean_number = '91' + clean_number
-
-#     # Validate number format
-#     if re.match(r'^971[45]\d{8}$', clean_number):  # UAE number validation
-#         logging.info('Number is a valid UAE number')
-#         return clean_number
-#     elif re.match(r'^91\d{10}$', clean_number):  # Indian number validation
-#         logging.info('Number is a valid Indian number')
-#         return clean_number
-
-#     logging.warning(f'Number format not recognized after cleaning: {number}')
-#     return None
 def validate_and_format_number(number):
     logging.info(f'Validating number: {number}')
     
