@@ -1,0 +1,8 @@
+2024/09/08-04:10:36.288 a920 Reusing MANIFEST C:\Users\ASUS\wa_auto\data\Default\Local Storage\leveldb/MANIFEST-000001
+2024/09/08-04:10:36.292 a920 Recovering log #6
+2024/09/08-04:10:36.292 a920 Level-0 table #8: started
+2024/09/08-04:10:36.295 a920 Level-0 table #8: 15981 bytes OK
+2024/09/08-04:10:36.296 a920 Recovering log #8
+2024/09/08-04:10:36.297 a920 Reusing old log C:\Users\ASUS\wa_auto\data\Default\Local Storage\leveldb/000008.log 
+2024/09/08-04:10:36.298 a920 Delete type=0 #6
+2024/09/08-04:10:36.298 a920 Delete type=2 #9

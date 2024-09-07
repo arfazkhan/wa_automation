@@ -1,187 +1,634 @@
-
-2024-08-24 18:04:24,776 - INFO - RateLimiter initialized with 200 tokens and last reset at 1724502864.7765608
-2024-08-24 18:04:24,777 - INFO - Initializing Chrome driver
-2024-08-24 18:05:05,559 - INFO - QR code scanned
-2024-08-24 18:05:05,560 - INFO - Loaded 4 sent contacts from sent_contacts.csv
-2024-08-24 18:05:05,561 - INFO - Reading contact: arfaz, 9048057376
-2024-08-24 18:05:05,561 - INFO - Validating number: 9048057376
-2024-08-24 18:05:05,561 - INFO - Number is a valid Indian number
-2024-08-24 18:05:05,561 - INFO - Duplicate contact found: arfaz with number 9048057376 (formatted: 919048057376) has already been processed. Skipping.
-2024-08-24 18:05:05,561 - INFO - Reading contact: irshad, 9895296142
-2024-08-24 18:05:05,561 - INFO - Validating number: 9895296142
-2024-08-24 18:05:05,561 - INFO - Number is a valid Indian number
-2024-08-24 18:05:05,561 - INFO - Duplicate contact found: irshad with number 9895296142 (formatted: 919895296142) has already been processed. Skipping.
-2024-08-24 18:05:05,561 - INFO - Reading contact: arfaz, 1234567890
-2024-08-24 18:05:05,561 - INFO - Validating number: 1234567890
-2024-08-24 18:05:05,561 - WARNING - Number format not recognized after cleaning: 1234567890
-2024-08-24 18:05:05,561 - ERROR - Failed to format number for contact arfaz: 1234567890
-2024-08-24 18:05:05,561 - ERROR - Error reading contact: I/O operation on closed file.
-2024-08-24 18:05:05,562 - INFO - Reading contact: irshad, 0569161388
-2024-08-24 18:05:05,562 - INFO - Validating number: 0569161388
-2024-08-24 18:05:05,562 - WARNING - Number format not recognized after cleaning: 0569161388
-2024-08-24 18:05:05,562 - ERROR - Failed to format number for contact irshad: 0569161388
-2024-08-24 18:05:05,562 - ERROR - Error reading contact: I/O operation on closed file.
-2024-08-24 18:05:05,562 - INFO - Reading contact: irshad, 9048057376
-2024-08-24 18:05:05,562 - INFO - Validating number: 9048057376
-2024-08-24 18:05:05,563 - INFO - Number is a valid Indian number
-2024-08-24 18:05:05,563 - INFO - Duplicate contact found: irshad with number 9048057376 (formatted: 919048057376) has already been processed. Skipping.
-2024-08-24 18:05:05,563 - INFO - Total time taken for sending messages: 0.00 seconds
-2024-08-24 18:05:05,563 - INFO - Total successful sends: 0
-2024-08-24 18:05:05,563 - INFO - Total failed sends: 2
-2024-08-24 18:05:05,563 - INFO - Closing the browser
-2024-08-24 18:06:18,662 - INFO - RateLimiter initialized with 200 tokens and last reset at 1724502978.6624758
-2024-08-24 18:06:18,662 - INFO - Initializing Chrome driver
-2024-08-24 18:06:37,566 - INFO - QR code scanned
-2024-08-24 18:06:37,575 - INFO - Loaded 2 sent contacts from sent_contacts.csv
-2024-08-24 18:06:37,575 - INFO - Reading contact: arfaz, 9048057376
-2024-08-24 18:06:37,575 - INFO - Validating number: 9048057376
-2024-08-24 18:06:37,576 - INFO - Number is a valid Indian number
-2024-08-24 18:06:37,576 - INFO - Duplicate contact found: arfaz with number 9048057376 (formatted: 919048057376) has already been processed. Skipping.
-2024-08-24 18:06:37,576 - INFO - Reading contact: irshad, 9895296142
-2024-08-24 18:06:37,576 - INFO - Validating number: 9895296142
-2024-08-24 18:06:37,576 - INFO - Number is a valid Indian number
-2024-08-24 18:06:43,709 - INFO - Opened chat for contact: irshad
-2024-08-24 18:06:44,025 - INFO - Attachment box clicked
-2024-08-24 18:06:44,687 - INFO - Document option clicked
-2024-08-24 18:06:46,766 - INFO - PDF file selected through file input
-2024-08-24 18:06:54,850 - INFO - Message sent to contact: irshad
-2024-08-24 18:06:54,864 - INFO - Message sent and confirmed for contact: irshad
-2024-08-24 18:06:54,864 - INFO - Saved sent contact irshad with number 9895296142 and formatted number 919895296142
-2024-08-24 18:07:13,865 - INFO - Random delay of 19 seconds before moving to next contact.
-2024-08-24 18:07:13,865 - INFO - Time taken for sending to contact irshad: 36.29 seconds
-2024-08-24 18:07:13,865 - INFO - Token acquired. Remaining tokens: 199
-2024-08-24 18:07:13,865 - INFO - Reading contact: arfaz, 1234567890
-2024-08-24 18:07:13,872 - INFO - Validating number: 1234567890
-2024-08-24 18:07:13,872 - WARNING - Number format not recognized after cleaning: 1234567890
-2024-08-24 18:07:13,872 - ERROR - Failed to format number for contact arfaz: 1234567890
-2024-08-24 18:07:13,873 - ERROR - Error reading contact: I/O operation on closed file.
-2024-08-24 18:07:13,873 - INFO - Reading contact: irshad, 0569161388
-2024-08-24 18:07:13,874 - INFO - Validating number: 0569161388
-2024-08-24 18:07:13,874 - WARNING - Number format not recognized after cleaning: 0569161388
-2024-08-24 18:07:13,874 - ERROR - Failed to format number for contact irshad: 0569161388
-2024-08-24 18:07:13,874 - ERROR - Error reading contact: I/O operation on closed file.
-2024-08-24 18:07:13,874 - INFO - Reading contact: irshad, 9048057376
-2024-08-24 18:07:13,875 - INFO - Validating number: 9048057376
-2024-08-24 18:07:13,875 - INFO - Number is a valid Indian number
-2024-08-24 18:07:13,875 - INFO - Duplicate contact found: irshad with number 9048057376 (formatted: 919048057376) has already been processed. Skipping.
-2024-08-24 18:07:13,875 - INFO - Total time taken for sending messages: 36.31 seconds
-2024-08-24 18:07:13,875 - INFO - Total successful sends: 1
-2024-08-24 18:07:13,875 - INFO - Total failed sends: 2
-2024-08-24 18:07:13,875 - INFO - Closing the browser
-2024-08-24 18:10:14,142 - INFO - RateLimiter initialized with 200 tokens and last reset at 1724503214.142483
-2024-08-24 18:10:14,143 - INFO - Initializing Chrome driver
-2024-08-24 18:10:45,488 - INFO - QR code scanned
-2024-08-24 18:10:45,490 - INFO - Loaded 4 sent contacts from sent_contacts.csv
-2024-08-24 18:10:45,490 - INFO - Reading contact: arfaz, 9048057376
-2024-08-24 18:10:45,490 - INFO - Validating number: 9048057376
-2024-08-24 18:10:45,490 - ERROR - Unexpected error reading contact: slice indices must be integers or None or have an __index__ method
-2024-08-24 18:10:45,491 - INFO - Reading contact: irshad, 9895296142
-2024-08-24 18:10:45,492 - INFO - Validating number: 9895296142
-2024-08-24 18:10:45,492 - ERROR - Unexpected error reading contact: slice indices must be integers or None or have an __index__ method
-2024-08-24 18:10:45,492 - INFO - Reading contact: arfaz, 1234567890
-2024-08-24 18:10:45,492 - INFO - Validating number: 1234567890
-2024-08-24 18:10:45,492 - ERROR - Unexpected error reading contact: slice indices must be integers or None or have an __index__ method
-2024-08-24 18:10:45,493 - INFO - Reading contact: irshad, 0569161388
-2024-08-24 18:10:45,493 - INFO - Validating number: 0569161388
-2024-08-24 18:10:45,493 - ERROR - Unexpected error reading contact: slice indices must be integers or None or have an __index__ method
-2024-08-24 18:10:45,493 - INFO - Reading contact: irshad, 9048057376
-2024-08-24 18:10:45,494 - INFO - Validating number: 9048057376
-2024-08-24 18:10:45,494 - ERROR - Unexpected error reading contact: slice indices must be integers or None or have an __index__ method
-2024-08-24 18:10:45,494 - INFO - Total time taken for sending messages: 0.01 seconds
-2024-08-24 18:10:45,494 - INFO - Total successful sends: 0
-2024-08-24 18:10:45,494 - INFO - Total failed sends: 0
-2024-08-24 18:10:45,494 - INFO - Closing the browser
-2024-08-24 18:13:06,490 - INFO - RateLimiter initialized with 200 tokens and last reset at 1724503386.49017
-2024-08-24 18:13:06,490 - INFO - Initializing Chrome driver
-2024-08-24 18:13:37,475 - INFO - QR code scanned
-2024-08-24 18:13:37,478 - INFO - Loaded 0 sent contacts from sent_contacts.csv
-2024-08-24 18:13:37,478 - INFO - Reading contact: arfaz, 9048057376
-2024-08-24 18:13:37,478 - INFO - Validating number: 9048057376
-2024-08-24 18:13:37,479 - INFO - Number is a valid Indian number
-2024-08-24 18:13:43,022 - INFO - Opened chat for contact: arfaz
-2024-08-24 18:13:43,596 - INFO - Attachment box clicked
-2024-08-24 18:13:43,875 - INFO - Document option clicked
-2024-08-24 18:13:45,931 - INFO - PDF file selected through file input
-2024-08-24 18:13:54,037 - INFO - Message sent to contact: arfaz
-2024-08-24 18:13:54,049 - INFO - Message sent and confirmed for contact: arfaz
-2024-08-24 18:13:54,050 - INFO - Saved sent contact arfaz with number 9048057376 and formatted number 919048057376
-2024-08-24 18:14:04,051 - INFO - Random delay of 10 seconds before moving to next contact.
-2024-08-24 18:14:04,051 - INFO - Time taken for sending to contact arfaz: 26.57 seconds
-2024-08-24 18:14:04,051 - INFO - Token acquired. Remaining tokens: 199
-2024-08-24 18:14:04,051 - INFO - Reading contact: irshad, 9895296142
-2024-08-24 18:14:04,051 - INFO - Validating number: 9895296142
-2024-08-24 18:14:04,051 - INFO - Number is a valid Indian number
-2024-08-24 18:14:09,527 - INFO - Opened chat for contact: irshad
-2024-08-24 18:14:10,127 - INFO - Attachment box clicked
-2024-08-24 18:14:10,766 - INFO - Document option clicked
-2024-08-24 18:14:12,849 - INFO - PDF file selected through file input
-2024-08-24 18:14:20,940 - INFO - Message sent to contact: irshad
-2024-08-24 18:14:20,964 - INFO - Message sent and confirmed for contact: irshad
-2024-08-24 18:14:20,965 - INFO - Saved sent contact irshad with number 9895296142 and formatted number 919895296142
-2024-08-24 18:14:25,966 - INFO - Random delay of 5 seconds before moving to next contact.
-2024-08-24 18:14:25,966 - INFO - Time taken for sending to contact irshad: 21.91 seconds
-2024-08-24 18:14:25,967 - INFO - Token acquired. Remaining tokens: 199
-2024-08-24 18:14:25,967 - INFO - Reading contact: arfaz, 1234567890
-2024-08-24 18:14:25,967 - INFO - Validating number: 1234567890
-2024-08-24 18:14:25,967 - WARNING - Number format not recognized after cleaning: 1234567890
-2024-08-24 18:14:25,967 - ERROR - Failed to format number for contact arfaz: 1234567890
-2024-08-24 18:14:25,967 - ERROR - Error reading contact: I/O operation on closed file.
-2024-08-24 18:14:25,968 - INFO - Reading contact: irshad, 0569161388
-2024-08-24 18:14:25,968 - INFO - Validating number: 0569161388
-2024-08-24 18:14:25,969 - INFO - Number is a valid UAE number
-2024-08-24 18:14:31,912 - INFO - Opened chat for contact: irshad
-2024-08-24 18:14:32,123 - INFO - Attachment box clicked
-2024-08-24 18:14:32,743 - INFO - Document option clicked
-2024-08-24 18:14:34,875 - INFO - PDF file selected through file input
-2024-08-24 18:14:43,033 - INFO - Message sent to contact: irshad
-2024-08-24 18:14:44,659 - INFO - Message sent and confirmed for contact: irshad
-2024-08-24 18:14:44,660 - INFO - Saved sent contact irshad with number 0569161388 and formatted number 971569161388
-2024-08-24 18:15:00,662 - INFO - Random delay of 16 seconds before moving to next contact.
-2024-08-24 18:15:00,662 - INFO - Time taken for sending to contact irshad: 34.69 seconds
-2024-08-24 18:15:00,662 - INFO - Token acquired. Remaining tokens: 199
-2024-08-24 18:15:00,662 - INFO - Reading contact: irshad, 9048057376
-2024-08-24 18:15:00,663 - INFO - Validating number: 9048057376
-2024-08-24 18:15:00,663 - INFO - Number is a valid Indian number
-2024-08-24 18:15:06,371 - INFO - Opened chat for contact: irshad
-2024-08-24 18:15:07,101 - INFO - Attachment box clicked
-2024-08-24 18:15:07,210 - INFO - Document option clicked
-2024-08-24 18:15:09,296 - INFO - PDF file selected through file input
-2024-08-24 18:15:17,392 - INFO - Message sent to contact: irshad
-2024-08-24 18:15:17,413 - INFO - Message sent and confirmed for contact: irshad
-2024-08-24 18:15:17,413 - INFO - Saved sent contact irshad with number 9048057376 and formatted number 919048057376
-2024-08-24 18:15:24,414 - INFO - Random delay of 7 seconds before moving to next contact.
-2024-08-24 18:15:24,415 - INFO - Time taken for sending to contact irshad: 23.75 seconds
-2024-08-24 18:15:24,415 - INFO - Token acquired. Remaining tokens: 199
-2024-08-24 18:15:24,415 - INFO - Total time taken for sending messages: 106.94 seconds
-2024-08-24 18:15:24,415 - INFO - Total successful sends: 4
-2024-08-24 18:15:24,415 - INFO - Total failed sends: 1
-2024-08-24 18:15:24,415 - INFO - Closing the browser
-2024-08-24 18:15:37,118 - INFO - RateLimiter initialized with 200 tokens and last reset at 1724503537.1185868
-2024-08-24 18:15:37,118 - INFO - Initializing Chrome driver
-2024-08-24 18:16:25,718 - INFO - QR code scanned
-2024-08-24 18:16:25,720 - INFO - Loaded 5 sent contacts from sent_contacts.csv
-2024-08-24 18:16:25,721 - INFO - Reading contact: arfaz, 9048057376
-2024-08-24 18:16:25,721 - INFO - Validating number: 9048057376
-2024-08-24 18:16:25,722 - INFO - Number is a valid Indian number
-2024-08-24 18:16:25,722 - INFO - Duplicate contact found: arfaz with number 9048057376 (formatted: 919048057376) has already been processed. Skipping.
-2024-08-24 18:16:25,722 - INFO - Reading contact: irshad, 9895296142
-2024-08-24 18:16:25,722 - INFO - Validating number: 9895296142
-2024-08-24 18:16:25,722 - INFO - Number is a valid Indian number
-2024-08-24 18:16:25,722 - INFO - Duplicate contact found: irshad with number 9895296142 (formatted: 919895296142) has already been processed. Skipping.
-2024-08-24 18:16:25,722 - INFO - Reading contact: arfaz, 1234567890
-2024-08-24 18:16:25,722 - INFO - Validating number: 1234567890
-2024-08-24 18:16:25,722 - WARNING - Number format not recognized after cleaning: 1234567890
-2024-08-24 18:16:25,722 - ERROR - Failed to format number for contact arfaz: 1234567890
-2024-08-24 18:16:25,722 - ERROR - Error reading contact: I/O operation on closed file.
-2024-08-24 18:16:25,723 - INFO - Reading contact: irshad, 0569161388
-2024-08-24 18:16:25,723 - INFO - Validating number: 0569161388
-2024-08-24 18:16:25,723 - INFO - Number is a valid UAE number
-2024-08-24 18:16:25,724 - INFO - Duplicate contact found: irshad with number 0569161388 (formatted: 971569161388) has already been processed. Skipping.
-2024-08-24 18:16:25,724 - INFO - Reading contact: irshad, 9048057376
-2024-08-24 18:16:25,724 - INFO - Validating number: 9048057376
-2024-08-24 18:16:25,724 - INFO - Number is a valid Indian number
-2024-08-24 18:16:25,724 - INFO - Duplicate contact found: irshad with number 9048057376 (formatted: 919048057376) has already been processed. Skipping.
-2024-08-24 18:16:25,724 - INFO - Total time taken for sending messages: 0.00 seconds
-2024-08-24 18:16:25,724 - INFO - Total successful sends: 0
-2024-08-24 18:16:25,724 - INFO - Total failed sends: 1
-2024-08-24 18:16:25,725 - INFO - Closing the browser
+2024-09-07 11:41:08,618 - INFO - RateLimiter initialized with 200 tokens and last reset at 1725689468.6186938
+2024-09-07 11:41:08,618 - INFO - Initializing Chrome driver
+2024-09-07 11:41:09,171 - WARNING - The chromedriver version (127.0.6533.119) detected in PATH at chromedriver.EXE might not be compatible with the detected chrome version (128.0.6613.120); currently, chromedriver 128.0.6613.119 is recommended for chrome 128.*, so it is advised to delete the driver in PATH and retry
+2024-09-07 11:41:31,840 - INFO - RateLimiter initialized with 200 tokens and last reset at 1725689491.840343
+2024-09-07 11:41:31,840 - INFO - Initializing Chrome driver
+2024-09-07 11:41:32,283 - WARNING - The chromedriver version (127.0.6533.119) detected in PATH at chromedriver.EXE might not be compatible with the detected chrome version (128.0.6613.120); currently, chromedriver 128.0.6613.119 is recommended for chrome 128.*, so it is advised to delete the driver in PATH and retry
+2024-09-07 11:44:07,943 - INFO - RateLimiter initialized with 200 tokens and last reset at 1725689647.9432175
+2024-09-07 11:44:07,943 - INFO - Initializing Chrome driver
+2024-09-07 11:44:08,429 - WARNING - The chromedriver version (127.0.6533.119) detected in PATH at chromedriver.EXE might not be compatible with the detected chrome version (128.0.6613.120); currently, chromedriver 128.0.6613.119 is recommended for chrome 128.*, so it is advised to delete the driver in PATH and retry
+2024-09-07 11:44:57,344 - INFO - QR code scanned
+2024-09-07 11:44:57,561 - INFO - Loaded 5 sent contacts from sent_contacts.csv
+2024-09-07 11:44:57,563 - INFO - Reading contact: arfaz, 9048057376
+2024-09-07 11:44:57,563 - INFO - Validating number: 9048057376
+2024-09-07 11:44:57,563 - INFO - Number is a valid Indian number
+2024-09-07 11:44:57,563 - INFO - Duplicate contact found: arfaz with number 9048057376 (formatted: 919048057376) has already been processed. Skipping.
+2024-09-07 11:44:57,563 - INFO - Reading contact: irshad, 9895296142
+2024-09-07 11:44:57,563 - INFO - Validating number: 9895296142
+2024-09-07 11:44:57,563 - INFO - Number is a valid Indian number
+2024-09-07 11:44:57,563 - INFO - Duplicate contact found: irshad with number 9895296142 (formatted: 919895296142) has already been processed. Skipping.
+2024-09-07 11:44:57,563 - INFO - Reading contact: arfaz, 1234567890
+2024-09-07 11:44:57,563 - INFO - Validating number: 1234567890
+2024-09-07 11:44:57,563 - WARNING - Number format not recognized after cleaning: 1234567890
+2024-09-07 11:44:57,563 - ERROR - Failed to format number for contact arfaz: 1234567890
+2024-09-07 11:44:57,563 - ERROR - Error reading contact: I/O operation on closed file.
+2024-09-07 11:44:57,563 - INFO - Reading contact: irshad, 0569161388
+2024-09-07 11:44:57,565 - INFO - Validating number: 0569161388
+2024-09-07 11:44:57,565 - INFO - Number is a valid UAE number
+2024-09-07 11:44:57,565 - INFO - Duplicate contact found: irshad with number 0569161388 (formatted: 971569161388) has already been processed. Skipping.
+2024-09-07 11:44:57,565 - INFO - Reading contact: irshad, 9048057376
+2024-09-07 11:44:57,565 - INFO - Validating number: 9048057376
+2024-09-07 11:44:57,565 - INFO - Number is a valid Indian number
+2024-09-07 11:44:57,565 - INFO - Duplicate contact found: irshad with number 9048057376 (formatted: 919048057376) has already been processed. Skipping.
+2024-09-07 11:44:57,565 - INFO - Total time taken for sending messages: 0.01 seconds
+2024-09-07 11:44:57,565 - INFO - Total successful sends: 0
+2024-09-07 11:44:57,565 - INFO - Total failed sends: 1
+2024-09-07 11:44:57,565 - INFO - Closing the browser
+2024-09-07 11:45:15,233 - INFO - RateLimiter initialized with 200 tokens and last reset at 1725689715.233372
+2024-09-07 11:45:15,233 - INFO - Initializing Chrome driver
+2024-09-07 11:45:15,788 - WARNING - The chromedriver version (127.0.6533.119) detected in PATH at chromedriver.EXE might not be compatible with the detected chrome version (128.0.6613.120); currently, chromedriver 128.0.6613.119 is recommended for chrome 128.*, so it is advised to delete the driver in PATH and retry
+2024-09-07 11:45:40,655 - INFO - Session restoration failed, need to scan QR code
+2024-09-07 11:45:44,717 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E04971D8B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/ce26b4c3fce887904b055db559e9c42a/cookie
+2024-09-07 11:45:48,766 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E04971E690>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/ce26b4c3fce887904b055db559e9c42a/cookie
+2024-09-07 11:45:52,815 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E04971E7E0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/ce26b4c3fce887904b055db559e9c42a/cookie
+2024-09-08 02:25:14,775 - INFO - RateLimiter initialized with 200 tokens and last reset at 1725742514.7755497
+2024-09-08 02:25:14,775 - INFO - Initializing Chrome driver
+2024-09-08 02:26:02,009 - WARNING - The chromedriver version (127.0.6533.119) detected in PATH at chromedriver.EXE might not be compatible with the detected chrome version (128.0.6613.119); currently, chromedriver 128.0.6613.119 is recommended for chrome 128.*, so it is advised to delete the driver in PATH and retry
+2024-09-08 02:27:19,661 - INFO - QR code scanned
+2024-09-08 02:27:19,666 - INFO - Loaded 5 sent contacts from sent_contacts.csv
+2024-09-08 02:27:19,666 - INFO - Reading contact: arfaz, 9048057376
+2024-09-08 02:27:19,666 - INFO - Validating number: 9048057376
+2024-09-08 02:27:19,666 - INFO - Number is a valid Indian number
+2024-09-08 02:27:19,666 - INFO - Duplicate contact found: arfaz with number 9048057376 (formatted: 919048057376) has already been processed. Skipping.
+2024-09-08 02:27:19,666 - INFO - Reading contact: irshad, 9895296142
+2024-09-08 02:27:19,666 - INFO - Validating number: 9895296142
+2024-09-08 02:27:19,666 - INFO - Number is a valid Indian number
+2024-09-08 02:27:19,666 - INFO - Duplicate contact found: irshad with number 9895296142 (formatted: 919895296142) has already been processed. Skipping.
+2024-09-08 02:27:19,666 - INFO - Reading contact: arfaz, 1234567890
+2024-09-08 02:27:19,666 - INFO - Validating number: 1234567890
+2024-09-08 02:27:19,666 - WARNING - Number format not recognized after cleaning: 1234567890
+2024-09-08 02:27:19,667 - ERROR - Failed to format number for contact arfaz: 1234567890
+2024-09-08 02:27:19,667 - ERROR - Error reading contact: I/O operation on closed file.
+2024-09-08 02:27:19,667 - INFO - Reading contact: irshad, 0569161388
+2024-09-08 02:27:19,667 - INFO - Validating number: 0569161388
+2024-09-08 02:27:19,667 - INFO - Number is a valid UAE number
+2024-09-08 02:27:19,667 - INFO - Duplicate contact found: irshad with number 0569161388 (formatted: 971569161388) has already been processed. Skipping.
+2024-09-08 02:27:19,667 - INFO - Reading contact: irshad, 9048057376
+2024-09-08 02:27:19,667 - INFO - Validating number: 9048057376
+2024-09-08 02:27:19,667 - INFO - Number is a valid Indian number
+2024-09-08 02:27:19,667 - INFO - Duplicate contact found: irshad with number 9048057376 (formatted: 919048057376) has already been processed. Skipping.
+2024-09-08 02:27:19,667 - INFO - Total time taken for sending messages: 0.01 seconds
+2024-09-08 02:27:19,667 - INFO - Total successful sends: 0
+2024-09-08 02:27:19,667 - INFO - Total failed sends: 1
+2024-09-08 02:27:49,111 - INFO - Script terminated by user.
+2024-09-08 02:27:55,459 - INFO - RateLimiter initialized with 200 tokens and last reset at 1725742675.4597147
+2024-09-08 02:27:55,459 - INFO - Initializing Chrome driver
+2024-09-08 02:27:55,583 - WARNING - The chromedriver version (127.0.6533.119) detected in PATH at chromedriver.EXE might not be compatible with the detected chrome version (128.0.6613.119); currently, chromedriver 128.0.6613.119 is recommended for chrome 128.*, so it is advised to delete the driver in PATH and retry
+2024-09-08 02:41:26,549 - INFO - RateLimiter initialized with 200 tokens and last reset at 1725743486.5492105
+2024-09-08 02:41:26,549 - INFO - Initializing Chrome driver with custom user data directory
+2024-09-08 02:41:26,653 - WARNING - The chromedriver version (127.0.6533.119) detected in PATH at chromedriver.EXE might not be compatible with the detected chrome version (128.0.6613.119); currently, chromedriver 128.0.6613.119 is recommended for chrome 128.*, so it is advised to delete the driver in PATH and retry
+2024-09-08 02:42:50,833 - INFO - QR code scanned
+2024-09-08 02:42:50,839 - INFO - Loaded 0 sent contacts from sent_contacts.csv
+2024-09-08 02:42:50,839 - INFO - Reading contact: arfaz, 9048057376
+2024-09-08 02:42:50,839 - INFO - Validating number: 9048057376
+2024-09-08 02:42:50,839 - INFO - Number is a valid Indian number
+2024-09-08 02:43:00,034 - INFO - Opened chat for contact: arfaz
+2024-09-08 02:43:00,594 - INFO - Attachment box clicked
+2024-09-08 02:43:00,685 - INFO - Document option clicked
+2024-09-08 02:43:02,745 - INFO - PDF file selected through file input
+2024-09-08 02:43:10,781 - INFO - Message sent to contact: arfaz
+2024-09-08 02:43:14,331 - INFO - Message sent and confirmed for contact: arfaz
+2024-09-08 02:43:14,332 - INFO - Saved sent contact arfaz with number 9048057376 and formatted number 919048057376
+2024-09-08 02:43:23,332 - INFO - Random delay of 9 seconds before moving to next contact.
+2024-09-08 02:43:23,332 - INFO - Time taken for sending to contact arfaz: 32.49 seconds
+2024-09-08 02:43:23,332 - INFO - Token acquired. Remaining tokens: 199
+2024-09-08 02:43:23,332 - INFO - Reading contact: irshad, 9895296142
+2024-09-08 02:43:23,332 - INFO - Validating number: 9895296142
+2024-09-08 02:43:23,332 - INFO - Number is a valid Indian number
+2024-09-08 02:43:27,513 - INFO - Opened chat for contact: irshad
+2024-09-08 02:43:28,126 - INFO - Attachment box clicked
+2024-09-08 02:43:30,810 - INFO - Document option clicked
+2024-09-08 02:43:32,847 - INFO - PDF file selected through file input
+2024-09-08 02:43:40,878 - INFO - Message sent to contact: irshad
+2024-09-08 02:43:41,903 - INFO - Message sent and confirmed for contact: irshad
+2024-09-08 02:43:41,903 - INFO - Saved sent contact irshad with number 9895296142 and formatted number 919895296142
+2024-09-08 02:43:59,904 - INFO - Random delay of 18 seconds before moving to next contact.
+2024-09-08 02:43:59,904 - INFO - Time taken for sending to contact irshad: 36.57 seconds
+2024-09-08 02:43:59,904 - INFO - Token acquired. Remaining tokens: 199
+2024-09-08 02:43:59,904 - INFO - Reading contact: arfaz, 1234567890
+2024-09-08 02:43:59,904 - INFO - Validating number: 1234567890
+2024-09-08 02:43:59,904 - WARNING - Number format not recognized after cleaning: 1234567890
+2024-09-08 02:43:59,904 - ERROR - Failed to format number for contact arfaz: 1234567890
+2024-09-08 02:43:59,904 - ERROR - Error reading contact: I/O operation on closed file.
+2024-09-08 02:43:59,904 - INFO - Reading contact: irshad, 0569161388
+2024-09-08 02:43:59,904 - INFO - Validating number: 0569161388
+2024-09-08 02:43:59,904 - INFO - Number is a valid UAE number
+2024-09-08 02:44:04,596 - INFO - Opened chat for contact: irshad
+2024-09-08 02:44:04,635 - INFO - Attachment box clicked
+2024-09-08 02:44:05,176 - INFO - Document option clicked
+2024-09-08 02:44:08,764 - INFO - PDF file selected through file input
+2024-09-08 02:44:16,801 - INFO - Message sent to contact: irshad
+2024-09-08 02:44:18,323 - INFO - Message sent and confirmed for contact: irshad
+2024-09-08 02:44:18,324 - INFO - Saved sent contact irshad with number 0569161388 and formatted number 971569161388
+2024-09-08 02:44:25,324 - INFO - Random delay of 7 seconds before moving to next contact.
+2024-09-08 02:44:25,324 - INFO - Time taken for sending to contact irshad: 25.42 seconds
+2024-09-08 02:44:25,324 - INFO - Token acquired. Remaining tokens: 199
+2024-09-08 02:44:25,324 - INFO - Reading contact: irshad, 9048057376
+2024-09-08 02:44:25,324 - INFO - Validating number: 9048057376
+2024-09-08 02:44:25,324 - INFO - Number is a valid Indian number
+2024-09-08 02:44:29,618 - INFO - Opened chat for contact: irshad
+2024-09-08 02:44:30,463 - INFO - Attachment box clicked
+2024-09-08 02:44:30,584 - INFO - Document option clicked
+2024-09-08 02:44:32,616 - INFO - PDF file selected through file input
+2024-09-08 02:44:40,653 - INFO - Message sent to contact: irshad
+2024-09-08 02:44:40,658 - INFO - Message sent and confirmed for contact: irshad
+2024-09-08 02:44:40,659 - INFO - Saved sent contact irshad with number 9048057376 and formatted number 919048057376
+2024-09-08 02:44:55,659 - INFO - Random delay of 15 seconds before moving to next contact.
+2024-09-08 02:44:55,659 - INFO - Time taken for sending to contact irshad: 30.33 seconds
+2024-09-08 02:44:55,659 - INFO - Token acquired. Remaining tokens: 199
+2024-09-08 02:44:55,659 - INFO - Total time taken for sending messages: 124.83 seconds
+2024-09-08 02:44:55,659 - INFO - Total successful sends: 4
+2024-09-08 02:44:55,659 - INFO - Total failed sends: 1
+2024-09-08 02:44:55,659 - INFO - Closing the browser
+2024-09-08 02:45:07,721 - INFO - RateLimiter initialized with 200 tokens and last reset at 1725743707.7217395
+2024-09-08 02:45:07,721 - INFO - Initializing Chrome driver with custom user data directory
+2024-09-08 02:45:07,827 - WARNING - The chromedriver version (127.0.6533.119) detected in PATH at chromedriver.EXE might not be compatible with the detected chrome version (128.0.6613.119); currently, chromedriver 128.0.6613.119 is recommended for chrome 128.*, so it is advised to delete the driver in PATH and retry
+2024-09-08 02:45:41,700 - INFO - QR code scanned
+2024-09-08 02:45:41,706 - INFO - Loaded 5 sent contacts from sent_contacts.csv
+2024-09-08 02:45:41,706 - INFO - Reading contact: arfaz, 9048057376
+2024-09-08 02:45:41,706 - INFO - Validating number: 9048057376
+2024-09-08 02:45:41,706 - INFO - Number is a valid Indian number
+2024-09-08 02:45:41,706 - INFO - Duplicate contact found: arfaz with number 9048057376 (formatted: 919048057376) has already been processed. Skipping.
+2024-09-08 02:45:41,706 - INFO - Reading contact: irshad, 9895296142
+2024-09-08 02:45:41,706 - INFO - Validating number: 9895296142
+2024-09-08 02:45:41,706 - INFO - Number is a valid Indian number
+2024-09-08 02:45:41,706 - INFO - Duplicate contact found: irshad with number 9895296142 (formatted: 919895296142) has already been processed. Skipping.
+2024-09-08 02:45:41,706 - INFO - Reading contact: arfaz, 1234567890
+2024-09-08 02:45:41,706 - INFO - Validating number: 1234567890
+2024-09-08 02:45:41,706 - WARNING - Number format not recognized after cleaning: 1234567890
+2024-09-08 02:45:41,706 - ERROR - Failed to format number for contact arfaz: 1234567890
+2024-09-08 02:45:41,706 - ERROR - Error reading contact: I/O operation on closed file.
+2024-09-08 02:45:41,707 - INFO - Reading contact: irshad, 0569161388
+2024-09-08 02:45:41,707 - INFO - Validating number: 0569161388
+2024-09-08 02:45:41,707 - INFO - Number is a valid UAE number
+2024-09-08 02:45:41,707 - INFO - Duplicate contact found: irshad with number 0569161388 (formatted: 971569161388) has already been processed. Skipping.
+2024-09-08 02:45:41,707 - INFO - Reading contact: irshad, 9048057376
+2024-09-08 02:45:41,707 - INFO - Validating number: 9048057376
+2024-09-08 02:45:41,707 - INFO - Number is a valid Indian number
+2024-09-08 02:45:41,707 - INFO - Duplicate contact found: irshad with number 9048057376 (formatted: 919048057376) has already been processed. Skipping.
+2024-09-08 02:45:41,707 - INFO - Total time taken for sending messages: 0.01 seconds
+2024-09-08 02:45:41,707 - INFO - Total successful sends: 0
+2024-09-08 02:45:41,707 - INFO - Total failed sends: 1
+2024-09-08 02:45:41,707 - INFO - Closing the browser
+2024-09-08 02:46:23,893 - INFO - RateLimiter initialized with 200 tokens and last reset at 1725743783.8939633
+2024-09-08 02:46:23,893 - INFO - Initializing Chrome driver with custom user data directory
+2024-09-08 02:46:23,988 - WARNING - The chromedriver version (127.0.6533.119) detected in PATH at chromedriver.EXE might not be compatible with the detected chrome version (128.0.6613.119); currently, chromedriver 128.0.6613.119 is recommended for chrome 128.*, so it is advised to delete the driver in PATH and retry
+2024-09-08 02:46:45,596 - INFO - QR code scanned
+2024-09-08 02:46:45,596 - INFO - Loaded 5 sent contacts from sent_contacts.csv
+2024-09-08 02:46:45,601 - INFO - Reading contact: arfaz, 9048057376
+2024-09-08 02:46:45,601 - INFO - Validating number: 9048057376
+2024-09-08 02:46:45,601 - INFO - Number is a valid Indian number
+2024-09-08 02:46:45,601 - INFO - Duplicate contact found: arfaz with number 9048057376 (formatted: 919048057376) has already been processed. Skipping.
+2024-09-08 02:46:45,601 - INFO - Reading contact: irshad, 9895296142
+2024-09-08 02:46:45,601 - INFO - Validating number: 9895296142
+2024-09-08 02:46:45,601 - INFO - Number is a valid Indian number
+2024-09-08 02:46:45,601 - INFO - Duplicate contact found: irshad with number 9895296142 (formatted: 919895296142) has already been processed. Skipping.
+2024-09-08 02:46:45,601 - INFO - Reading contact: arfaz, 1234567890
+2024-09-08 02:46:45,601 - INFO - Validating number: 1234567890
+2024-09-08 02:46:45,601 - WARNING - Number format not recognized after cleaning: 1234567890
+2024-09-08 02:46:45,601 - ERROR - Failed to format number for contact arfaz: 1234567890
+2024-09-08 02:46:45,601 - ERROR - Error reading contact: I/O operation on closed file.
+2024-09-08 02:46:45,601 - INFO - Reading contact: irshad, 0569161388
+2024-09-08 02:46:45,601 - INFO - Validating number: 0569161388
+2024-09-08 02:46:45,601 - INFO - Number is a valid UAE number
+2024-09-08 02:46:45,601 - INFO - Duplicate contact found: irshad with number 0569161388 (formatted: 971569161388) has already been processed. Skipping.
+2024-09-08 02:46:45,601 - INFO - Reading contact: irshad, 9048057376
+2024-09-08 02:46:45,601 - INFO - Validating number: 9048057376
+2024-09-08 02:46:45,601 - INFO - Number is a valid Indian number
+2024-09-08 02:46:45,601 - INFO - Duplicate contact found: irshad with number 9048057376 (formatted: 919048057376) has already been processed. Skipping.
+2024-09-08 02:46:45,601 - INFO - Reading contact: ubaid,  7356571857
+2024-09-08 02:46:45,602 - INFO - Validating number:  7356571857
+2024-09-08 02:46:45,602 - WARNING - Number format not recognized after cleaning:  7356571857
+2024-09-08 02:46:45,602 - ERROR - Failed to format number for contact ubaid:  7356571857
+2024-09-08 02:46:45,602 - ERROR - Error reading contact: I/O operation on closed file.
+2024-09-08 02:46:45,602 - INFO - Total time taken for sending messages: 0.01 seconds
+2024-09-08 02:46:45,602 - INFO - Total successful sends: 0
+2024-09-08 02:46:45,602 - INFO - Total failed sends: 2
+2024-09-08 02:46:45,602 - INFO - Closing the browser
+2024-09-08 02:46:55,835 - INFO - RateLimiter initialized with 200 tokens and last reset at 1725743815.835937
+2024-09-08 02:46:55,835 - INFO - Initializing Chrome driver with custom user data directory
+2024-09-08 02:46:55,931 - WARNING - The chromedriver version (127.0.6533.119) detected in PATH at chromedriver.EXE might not be compatible with the detected chrome version (128.0.6613.119); currently, chromedriver 128.0.6613.119 is recommended for chrome 128.*, so it is advised to delete the driver in PATH and retry
+2024-09-08 02:47:11,117 - INFO - QR code scanned
+2024-09-08 02:47:11,117 - INFO - Loaded 5 sent contacts from sent_contacts.csv
+2024-09-08 02:47:11,118 - INFO - Reading contact: arfaz, 9048057376
+2024-09-08 02:47:11,118 - INFO - Validating number: 9048057376
+2024-09-08 02:47:11,118 - INFO - Number is a valid Indian number
+2024-09-08 02:47:11,118 - INFO - Duplicate contact found: arfaz with number 9048057376 (formatted: 919048057376) has already been processed. Skipping.
+2024-09-08 02:47:11,118 - INFO - Reading contact: irshad, 9895296142
+2024-09-08 02:47:11,118 - INFO - Validating number: 9895296142
+2024-09-08 02:47:11,118 - INFO - Number is a valid Indian number
+2024-09-08 02:47:11,118 - INFO - Duplicate contact found: irshad with number 9895296142 (formatted: 919895296142) has already been processed. Skipping.
+2024-09-08 02:47:11,118 - INFO - Reading contact: arfaz, 1234567890
+2024-09-08 02:47:11,118 - INFO - Validating number: 1234567890
+2024-09-08 02:47:11,118 - WARNING - Number format not recognized after cleaning: 1234567890
+2024-09-08 02:47:11,118 - ERROR - Failed to format number for contact arfaz: 1234567890
+2024-09-08 02:47:11,118 - ERROR - Error reading contact: I/O operation on closed file.
+2024-09-08 02:47:11,118 - INFO - Reading contact: irshad, 0569161388
+2024-09-08 02:47:11,118 - INFO - Validating number: 0569161388
+2024-09-08 02:47:11,118 - INFO - Number is a valid UAE number
+2024-09-08 02:47:11,118 - INFO - Duplicate contact found: irshad with number 0569161388 (formatted: 971569161388) has already been processed. Skipping.
+2024-09-08 02:47:11,118 - INFO - Reading contact: irshad, 9048057376
+2024-09-08 02:47:11,118 - INFO - Validating number: 9048057376
+2024-09-08 02:47:11,118 - INFO - Number is a valid Indian number
+2024-09-08 02:47:11,118 - INFO - Duplicate contact found: irshad with number 9048057376 (formatted: 919048057376) has already been processed. Skipping.
+2024-09-08 02:47:11,118 - INFO - Reading contact: ubaid,  7356571857
+2024-09-08 02:47:11,118 - INFO - Validating number:  7356571857
+2024-09-08 02:47:11,118 - WARNING - Number format not recognized after cleaning:  7356571857
+2024-09-08 02:47:11,119 - ERROR - Failed to format number for contact ubaid:  7356571857
+2024-09-08 02:47:11,119 - ERROR - Error reading contact: I/O operation on closed file.
+2024-09-08 02:47:11,119 - INFO - Total time taken for sending messages: 0.00 seconds
+2024-09-08 02:47:11,119 - INFO - Total successful sends: 0
+2024-09-08 02:47:11,119 - INFO - Total failed sends: 2
+2024-09-08 02:47:11,119 - INFO - Closing the browser
+2024-09-08 02:47:42,228 - INFO - RateLimiter initialized with 200 tokens and last reset at 1725743862.2286232
+2024-09-08 02:47:42,228 - INFO - Initializing Chrome driver with custom user data directory
+2024-09-08 02:47:42,317 - WARNING - The chromedriver version (127.0.6533.119) detected in PATH at chromedriver.EXE might not be compatible with the detected chrome version (128.0.6613.119); currently, chromedriver 128.0.6613.119 is recommended for chrome 128.*, so it is advised to delete the driver in PATH and retry
+2024-09-08 02:47:55,377 - INFO - QR code scanned
+2024-09-08 02:47:55,377 - INFO - Loaded 5 sent contacts from sent_contacts.csv
+2024-09-08 02:47:55,381 - INFO - Reading contact: arfaz, 9048057376
+2024-09-08 02:47:55,381 - INFO - Validating number: 9048057376
+2024-09-08 02:47:55,381 - INFO - Number is a valid Indian number
+2024-09-08 02:47:55,381 - INFO - Duplicate contact found: arfaz with number 9048057376 (formatted: 919048057376) has already been processed. Skipping.
+2024-09-08 02:47:55,381 - INFO - Reading contact: irshad, 9895296142
+2024-09-08 02:47:55,381 - INFO - Validating number: 9895296142
+2024-09-08 02:47:55,381 - INFO - Number is a valid Indian number
+2024-09-08 02:47:55,381 - INFO - Duplicate contact found: irshad with number 9895296142 (formatted: 919895296142) has already been processed. Skipping.
+2024-09-08 02:47:55,381 - INFO - Reading contact: arfaz, 1234567890
+2024-09-08 02:47:55,382 - INFO - Validating number: 1234567890
+2024-09-08 02:47:55,382 - WARNING - Number format not recognized after cleaning: 1234567890
+2024-09-08 02:47:55,382 - ERROR - Failed to format number for contact arfaz: 1234567890
+2024-09-08 02:47:55,382 - ERROR - Error reading contact: I/O operation on closed file.
+2024-09-08 02:47:55,382 - INFO - Reading contact: irshad, 0569161388
+2024-09-08 02:47:55,382 - INFO - Validating number: 0569161388
+2024-09-08 02:47:55,382 - INFO - Number is a valid UAE number
+2024-09-08 02:47:55,382 - INFO - Duplicate contact found: irshad with number 0569161388 (formatted: 971569161388) has already been processed. Skipping.
+2024-09-08 02:47:55,382 - INFO - Reading contact: irshad, 9048057376
+2024-09-08 02:47:55,382 - INFO - Validating number: 9048057376
+2024-09-08 02:47:55,382 - INFO - Number is a valid Indian number
+2024-09-08 02:47:55,382 - INFO - Duplicate contact found: irshad with number 9048057376 (formatted: 919048057376) has already been processed. Skipping.
+2024-09-08 02:47:55,382 - INFO - Reading contact: ubaid,  +917356571857
+2024-09-08 02:47:55,382 - INFO - Validating number:  +917356571857
+2024-09-08 02:47:55,382 - WARNING - Number format not recognized after cleaning:  +917356571857
+2024-09-08 02:47:55,382 - ERROR - Failed to format number for contact ubaid:  +917356571857
+2024-09-08 02:47:55,382 - ERROR - Error reading contact: I/O operation on closed file.
+2024-09-08 02:47:55,382 - INFO - Total time taken for sending messages: 0.00 seconds
+2024-09-08 02:47:55,382 - INFO - Total successful sends: 0
+2024-09-08 02:47:55,383 - INFO - Total failed sends: 2
+2024-09-08 02:47:55,383 - INFO - Closing the browser
+2024-09-08 02:48:35,043 - INFO - RateLimiter initialized with 200 tokens and last reset at 1725743915.043083
+2024-09-08 02:48:35,043 - INFO - Initializing Chrome driver with custom user data directory
+2024-09-08 02:48:35,131 - WARNING - The chromedriver version (127.0.6533.119) detected in PATH at chromedriver.EXE might not be compatible with the detected chrome version (128.0.6613.119); currently, chromedriver 128.0.6613.119 is recommended for chrome 128.*, so it is advised to delete the driver in PATH and retry
+2024-09-08 02:48:52,393 - INFO - QR code scanned
+2024-09-08 02:48:52,393 - INFO - Loaded 5 sent contacts from sent_contacts.csv
+2024-09-08 02:48:52,395 - INFO - Reading contact: arfaz, 9048057376
+2024-09-08 02:48:52,395 - INFO - Validating number: 9048057376
+2024-09-08 02:48:52,395 - INFO - Number is a valid Indian number
+2024-09-08 02:48:52,395 - INFO - Duplicate contact found: arfaz with number 9048057376 (formatted: 919048057376) has already been processed. Skipping.
+2024-09-08 02:48:52,395 - INFO - Reading contact: irshad, 9895296142
+2024-09-08 02:48:52,395 - INFO - Validating number: 9895296142
+2024-09-08 02:48:52,395 - INFO - Number is a valid Indian number
+2024-09-08 02:48:52,395 - INFO - Duplicate contact found: irshad with number 9895296142 (formatted: 919895296142) has already been processed. Skipping.
+2024-09-08 02:48:52,395 - INFO - Reading contact: arfaz, 1234567890
+2024-09-08 02:48:52,395 - INFO - Validating number: 1234567890
+2024-09-08 02:48:52,395 - WARNING - Number format not recognized after cleaning: 1234567890
+2024-09-08 02:48:52,395 - ERROR - Failed to format number for contact arfaz: 1234567890
+2024-09-08 02:48:52,395 - ERROR - Error reading contact: I/O operation on closed file.
+2024-09-08 02:48:52,395 - INFO - Reading contact: irshad, 0569161388
+2024-09-08 02:48:52,395 - INFO - Validating number: 0569161388
+2024-09-08 02:48:52,395 - INFO - Number is a valid UAE number
+2024-09-08 02:48:52,395 - INFO - Duplicate contact found: irshad with number 0569161388 (formatted: 971569161388) has already been processed. Skipping.
+2024-09-08 02:48:52,395 - INFO - Reading contact: irshad, 9048057376
+2024-09-08 02:48:52,395 - INFO - Validating number: 9048057376
+2024-09-08 02:48:52,396 - INFO - Number is a valid Indian number
+2024-09-08 02:48:52,396 - INFO - Duplicate contact found: irshad with number 9048057376 (formatted: 919048057376) has already been processed. Skipping.
+2024-09-08 02:48:52,396 - INFO - Reading contact: ubaid,  7356571857
+2024-09-08 02:48:52,396 - INFO - Validating number:  7356571857
+2024-09-08 02:48:52,396 - WARNING - Number format not recognized after cleaning:  7356571857
+2024-09-08 02:48:52,396 - ERROR - Failed to format number for contact ubaid:  7356571857
+2024-09-08 02:48:52,396 - ERROR - Error reading contact: I/O operation on closed file.
+2024-09-08 02:48:52,396 - INFO - Total time taken for sending messages: 0.00 seconds
+2024-09-08 02:48:52,396 - INFO - Total successful sends: 0
+2024-09-08 02:48:52,396 - INFO - Total failed sends: 2
+2024-09-08 02:48:52,396 - INFO - Closing the browser
+2024-09-08 02:49:08,883 - INFO - RateLimiter initialized with 200 tokens and last reset at 1725743948.8833394
+2024-09-08 02:49:08,883 - INFO - Initializing Chrome driver with custom user data directory
+2024-09-08 02:49:08,976 - WARNING - The chromedriver version (127.0.6533.119) detected in PATH at chromedriver.EXE might not be compatible with the detected chrome version (128.0.6613.119); currently, chromedriver 128.0.6613.119 is recommended for chrome 128.*, so it is advised to delete the driver in PATH and retry
+2024-09-08 02:49:18,250 - INFO - QR code scanned
+2024-09-08 02:49:18,251 - INFO - Loaded 5 sent contacts from sent_contacts.csv
+2024-09-08 02:49:18,254 - INFO - Reading contact: arfaz, 9048057376
+2024-09-08 02:49:18,254 - INFO - Validating number: 9048057376
+2024-09-08 02:49:18,254 - INFO - Number is a valid Indian number
+2024-09-08 02:49:18,254 - INFO - Duplicate contact found: arfaz with number 9048057376 (formatted: 919048057376) has already been processed. Skipping.
+2024-09-08 02:49:18,254 - INFO - Reading contact: irshad, 9895296142
+2024-09-08 02:49:18,255 - INFO - Validating number: 9895296142
+2024-09-08 02:49:18,255 - INFO - Number is a valid Indian number
+2024-09-08 02:49:18,255 - INFO - Duplicate contact found: irshad with number 9895296142 (formatted: 919895296142) has already been processed. Skipping.
+2024-09-08 02:49:18,255 - INFO - Reading contact: arfaz, 1234567890
+2024-09-08 02:49:18,255 - INFO - Validating number: 1234567890
+2024-09-08 02:49:18,255 - WARNING - Number format not recognized after cleaning: 1234567890
+2024-09-08 02:49:18,255 - ERROR - Failed to format number for contact arfaz: 1234567890
+2024-09-08 02:49:18,255 - ERROR - Error reading contact: I/O operation on closed file.
+2024-09-08 02:49:18,256 - INFO - Reading contact: irshad, 0569161388
+2024-09-08 02:49:18,256 - INFO - Validating number: 0569161388
+2024-09-08 02:49:18,256 - INFO - Number is a valid UAE number
+2024-09-08 02:49:18,256 - INFO - Duplicate contact found: irshad with number 0569161388 (formatted: 971569161388) has already been processed. Skipping.
+2024-09-08 02:49:18,256 - INFO - Reading contact: irshad, 9048057376
+2024-09-08 02:49:18,256 - INFO - Validating number: 9048057376
+2024-09-08 02:49:18,256 - INFO - Number is a valid Indian number
+2024-09-08 02:49:18,256 - INFO - Duplicate contact found: irshad with number 9048057376 (formatted: 919048057376) has already been processed. Skipping.
+2024-09-08 02:49:18,256 - INFO - Reading contact: ubaid,  917356571857
+2024-09-08 02:49:18,256 - INFO - Validating number:  917356571857
+2024-09-08 02:49:18,256 - WARNING - Number format not recognized after cleaning:  917356571857
+2024-09-08 02:49:18,256 - ERROR - Failed to format number for contact ubaid:  917356571857
+2024-09-08 02:49:18,256 - ERROR - Error reading contact: I/O operation on closed file.
+2024-09-08 02:49:18,256 - INFO - Total time taken for sending messages: 0.01 seconds
+2024-09-08 02:49:18,256 - INFO - Total successful sends: 0
+2024-09-08 02:49:18,256 - INFO - Total failed sends: 2
+2024-09-08 02:49:18,256 - INFO - Closing the browser
+2024-09-08 02:49:41,163 - INFO - RateLimiter initialized with 200 tokens and last reset at 1725743981.1632955
+2024-09-08 02:49:41,163 - INFO - Initializing Chrome driver with custom user data directory
+2024-09-08 02:49:41,250 - WARNING - The chromedriver version (127.0.6533.119) detected in PATH at chromedriver.EXE might not be compatible with the detected chrome version (128.0.6613.119); currently, chromedriver 128.0.6613.119 is recommended for chrome 128.*, so it is advised to delete the driver in PATH and retry
+2024-09-08 02:50:05,086 - INFO - QR code scanned
+2024-09-08 02:50:05,087 - INFO - Loaded 5 sent contacts from sent_contacts.csv
+2024-09-08 02:50:05,091 - INFO - Reading contact: ubaid,  7356571857
+2024-09-08 02:50:05,092 - INFO - Validating number:  7356571857
+2024-09-08 02:50:05,092 - WARNING - Number format not recognized after cleaning:  7356571857
+2024-09-08 02:50:05,092 - ERROR - Failed to format number for contact ubaid:  7356571857
+2024-09-08 02:50:05,092 - ERROR - Error reading contact: I/O operation on closed file.
+2024-09-08 02:50:05,092 - INFO - Total time taken for sending messages: 0.00 seconds
+2024-09-08 02:50:05,092 - INFO - Total successful sends: 0
+2024-09-08 02:50:05,092 - INFO - Total failed sends: 1
+2024-09-08 02:50:05,092 - INFO - Closing the browser
+2024-09-08 02:50:15,021 - INFO - RateLimiter initialized with 200 tokens and last reset at 1725744015.0219076
+2024-09-08 02:50:15,021 - INFO - Initializing Chrome driver with custom user data directory
+2024-09-08 02:50:15,117 - WARNING - The chromedriver version (127.0.6533.119) detected in PATH at chromedriver.EXE might not be compatible with the detected chrome version (128.0.6613.119); currently, chromedriver 128.0.6613.119 is recommended for chrome 128.*, so it is advised to delete the driver in PATH and retry
+2024-09-08 02:50:25,941 - INFO - QR code scanned
+2024-09-08 02:50:25,942 - INFO - Loaded 5 sent contacts from sent_contacts.csv
+2024-09-08 02:50:25,946 - INFO - Reading contact: ubaid,  917356571857
+2024-09-08 02:50:25,946 - INFO - Validating number:  917356571857
+2024-09-08 02:50:25,946 - WARNING - Number format not recognized after cleaning:  917356571857
+2024-09-08 02:50:25,946 - ERROR - Failed to format number for contact ubaid:  917356571857
+2024-09-08 02:50:25,946 - ERROR - Error reading contact: I/O operation on closed file.
+2024-09-08 02:50:25,947 - INFO - Total time taken for sending messages: 0.01 seconds
+2024-09-08 02:50:25,947 - INFO - Total successful sends: 0
+2024-09-08 02:50:25,947 - INFO - Total failed sends: 1
+2024-09-08 02:50:25,947 - INFO - Closing the browser
+2024-09-08 03:46:24,809 - INFO - RateLimiter initialized with 200 tokens and last reset at 1725747384.8087463
+2024-09-08 03:46:24,809 - INFO - Initializing Chrome driver with custom user data directory
+2024-09-08 03:46:25,469 - WARNING - The chromedriver version (127.0.6533.119) detected in PATH at chromedriver.EXE might not be compatible with the detected chrome version (128.0.6613.119); currently, chromedriver 128.0.6613.119 is recommended for chrome 128.*, so it is advised to delete the driver in PATH and retry
+2024-09-08 03:46:33,663 - INFO - QR code scanned
+2024-09-08 03:46:33,664 - INFO - Loaded 5 sent contacts from sent_contacts.csv
+2024-09-08 03:46:33,668 - INFO - Reading contact: ubaid, 917356571857
+2024-09-08 03:46:33,668 - INFO - Validating number: 917356571857
+2024-09-08 03:46:33,668 - WARNING - Number format not recognized after cleaning: 917356571857
+2024-09-08 03:46:33,668 - ERROR - Failed to format number for contact ubaid: 917356571857
+2024-09-08 03:46:33,668 - ERROR - Error reading contact: I/O operation on closed file.
+2024-09-08 03:46:33,670 - INFO - Total time taken for sending messages: 0.01 seconds
+2024-09-08 03:46:33,670 - INFO - Total successful sends: 0
+2024-09-08 03:46:33,670 - INFO - Total failed sends: 1
+2024-09-08 03:46:33,670 - INFO - Closing the browser
+2024-09-08 03:46:57,392 - INFO - RateLimiter initialized with 200 tokens and last reset at 1725747417.3920338
+2024-09-08 03:46:57,392 - INFO - Initializing Chrome driver with custom user data directory
+2024-09-08 03:46:57,533 - WARNING - The chromedriver version (127.0.6533.119) detected in PATH at chromedriver.EXE might not be compatible with the detected chrome version (128.0.6613.119); currently, chromedriver 128.0.6613.119 is recommended for chrome 128.*, so it is advised to delete the driver in PATH and retry
+2024-09-08 03:47:04,835 - INFO - QR code scanned
+2024-09-08 03:47:04,836 - INFO - Loaded 5 sent contacts from sent_contacts.csv
+2024-09-08 03:47:04,836 - INFO - Reading contact: ubaid, 917356571857
+2024-09-08 03:47:04,836 - INFO - Validating number: 917356571857
+2024-09-08 03:47:04,836 - WARNING - Number format not recognized after cleaning: 917356571857
+2024-09-08 03:47:04,836 - ERROR - Failed to format number for contact ubaid: 917356571857
+2024-09-08 03:47:04,837 - ERROR - Error reading contact: I/O operation on closed file.
+2024-09-08 03:47:04,837 - INFO - Total time taken for sending messages: 0.00 seconds
+2024-09-08 03:47:04,837 - INFO - Total successful sends: 0
+2024-09-08 03:47:04,837 - INFO - Total failed sends: 1
+2024-09-08 03:47:04,837 - INFO - Closing the browser
+2024-09-08 03:48:00,083 - INFO - RateLimiter initialized with 200 tokens and last reset at 1725747480.0830455
+2024-09-08 03:48:00,083 - INFO - Initializing Chrome driver with custom user data directory
+2024-09-08 03:48:00,174 - WARNING - The chromedriver version (127.0.6533.119) detected in PATH at chromedriver.EXE might not be compatible with the detected chrome version (128.0.6613.119); currently, chromedriver 128.0.6613.119 is recommended for chrome 128.*, so it is advised to delete the driver in PATH and retry
+2024-09-08 03:48:07,587 - INFO - QR code scanned
+2024-09-08 03:48:07,592 - INFO - Loaded 3 sent contacts from sent_contacts.csv
+2024-09-08 03:48:07,596 - INFO - Reading contact: arfaz, 9048057376
+2024-09-08 03:48:07,596 - INFO - Validating number: 9048057376
+2024-09-08 03:48:07,596 - INFO - Number is a valid Indian number
+2024-09-08 03:48:14,312 - INFO - Opened chat for contact: arfaz
+2024-09-08 03:48:14,819 - INFO - Attachment box clicked
+2024-09-08 03:48:15,390 - INFO - Document option clicked
+2024-09-08 03:48:17,432 - INFO - PDF file selected through file input
+2024-09-08 03:48:25,512 - INFO - Message sent to contact: arfaz
+2024-09-08 03:48:25,520 - INFO - Message sent and confirmed for contact: arfaz
+2024-09-08 03:48:25,521 - INFO - Saved sent contact arfaz with number 9048057376 and formatted number 919048057376
+2024-09-08 03:48:35,521 - INFO - Random delay of 10 seconds before moving to next contact.
+2024-09-08 03:48:35,521 - INFO - Time taken for sending to contact arfaz: 27.93 seconds
+2024-09-08 03:48:35,521 - INFO - Token acquired. Remaining tokens: 199
+2024-09-08 03:48:35,521 - INFO - Total time taken for sending messages: 27.93 seconds
+2024-09-08 03:48:35,521 - INFO - Total successful sends: 1
+2024-09-08 03:48:35,521 - INFO - Total failed sends: 0
+2024-09-08 03:48:35,521 - INFO - Closing the browser
+2024-09-08 03:48:59,911 - INFO - RateLimiter initialized with 200 tokens and last reset at 1725747539.9114783
+2024-09-08 03:48:59,911 - INFO - Initializing Chrome driver with custom user data directory
+2024-09-08 03:49:00,004 - WARNING - The chromedriver version (127.0.6533.119) detected in PATH at chromedriver.EXE might not be compatible with the detected chrome version (128.0.6613.119); currently, chromedriver 128.0.6613.119 is recommended for chrome 128.*, so it is advised to delete the driver in PATH and retry
+2024-09-08 03:49:09,695 - INFO - QR code scanned
+2024-09-08 03:49:09,695 - INFO - Loaded 5 sent contacts from sent_contacts.csv
+2024-09-08 03:49:09,699 - INFO - Reading contact: arfaz, 9048057376
+2024-09-08 03:49:09,699 - INFO - Validating number: 9048057376
+2024-09-08 03:49:09,699 - INFO - Number is a valid Indian number
+2024-09-08 03:49:09,699 - INFO - Duplicate contact found: arfaz with number 9048057376 (formatted: 919048057376) has already been processed. Skipping.
+2024-09-08 03:49:09,699 - INFO - Reading contact: ubaid, 7356571857
+2024-09-08 03:49:09,699 - INFO - Validating number: 7356571857
+2024-09-08 03:49:09,699 - WARNING - Number format not recognized after cleaning: 7356571857
+2024-09-08 03:49:09,699 - ERROR - Failed to format number for contact ubaid: 7356571857
+2024-09-08 03:49:09,699 - ERROR - Error reading contact: I/O operation on closed file.
+2024-09-08 03:49:09,699 - INFO - Total time taken for sending messages: 0.00 seconds
+2024-09-08 03:49:09,699 - INFO - Total successful sends: 0
+2024-09-08 03:49:09,699 - INFO - Total failed sends: 1
+2024-09-08 03:49:09,699 - INFO - Closing the browser
+2024-09-08 03:50:18,081 - INFO - RateLimiter initialized with 200 tokens and last reset at 1725747618.0814822
+2024-09-08 03:50:18,081 - INFO - Initializing Chrome driver with custom user data directory
+2024-09-08 03:50:18,183 - WARNING - The chromedriver version (127.0.6533.119) detected in PATH at chromedriver.EXE might not be compatible with the detected chrome version (128.0.6613.119); currently, chromedriver 128.0.6613.119 is recommended for chrome 128.*, so it is advised to delete the driver in PATH and retry
+2024-09-08 03:50:27,528 - INFO - QR code scanned
+2024-09-08 03:50:27,534 - INFO - Loaded 4 sent contacts from sent_contacts.csv
+2024-09-08 03:50:27,537 - INFO - Reading contact: arfaz, 9048057376
+2024-09-08 03:50:27,538 - INFO - Validating number: 9048057376
+2024-09-08 03:50:27,538 - INFO - Number is a valid Indian number
+2024-09-08 03:50:27,538 - INFO - Duplicate contact found: arfaz with number 9048057376 (formatted: 919048057376) has already been processed. Skipping.
+2024-09-08 03:50:27,538 - INFO - Reading contact: ubaid, 7356571857
+2024-09-08 03:50:27,538 - INFO - Validating number: 7356571857
+2024-09-08 03:50:27,538 - WARNING - Number format not recognized after cleaning: 7356571857
+2024-09-08 03:50:27,538 - ERROR - Failed to format number for contact ubaid: 7356571857
+2024-09-08 03:50:27,538 - ERROR - Error reading contact: I/O operation on closed file.
+2024-09-08 03:50:27,538 - INFO - Reading contact: irshad, 9895296142
+2024-09-08 03:50:27,538 - INFO - Validating number: 9895296142
+2024-09-08 03:50:27,538 - INFO - Number is a valid Indian number
+2024-09-08 03:50:32,613 - INFO - Opened chat for contact: irshad
+2024-09-08 03:50:33,069 - INFO - Attachment box clicked
+2024-09-08 03:50:33,626 - INFO - Document option clicked
+2024-09-08 03:50:35,663 - INFO - PDF file selected through file input
+2024-09-08 03:50:43,705 - INFO - Message sent to contact: irshad
+2024-09-08 03:50:43,714 - INFO - Message sent and confirmed for contact: irshad
+2024-09-08 03:50:43,715 - INFO - Saved sent contact irshad with number 9895296142 and formatted number 919895296142
+2024-09-08 03:50:49,715 - INFO - Random delay of 6 seconds before moving to next contact.
+2024-09-08 03:50:49,715 - INFO - Time taken for sending to contact irshad: 22.18 seconds
+2024-09-08 03:50:49,715 - INFO - Token acquired. Remaining tokens: 199
+2024-09-08 03:50:49,715 - INFO - Total time taken for sending messages: 22.19 seconds
+2024-09-08 03:50:49,715 - INFO - Total successful sends: 1
+2024-09-08 03:50:49,715 - INFO - Total failed sends: 1
+2024-09-08 03:50:49,715 - INFO - Closing the browser
+2024-09-08 03:51:09,127 - INFO - RateLimiter initialized with 200 tokens and last reset at 1725747669.1271513
+2024-09-08 03:51:09,127 - INFO - Initializing Chrome driver with custom user data directory
+2024-09-08 03:51:09,225 - WARNING - The chromedriver version (127.0.6533.119) detected in PATH at chromedriver.EXE might not be compatible with the detected chrome version (128.0.6613.119); currently, chromedriver 128.0.6613.119 is recommended for chrome 128.*, so it is advised to delete the driver in PATH and retry
+2024-09-08 03:51:16,736 - INFO - QR code scanned
+2024-09-08 03:51:16,737 - INFO - Loaded 5 sent contacts from sent_contacts.csv
+2024-09-08 03:51:16,740 - INFO - Reading contact: arfaz, 9048057376
+2024-09-08 03:51:16,740 - INFO - Validating number: 9048057376
+2024-09-08 03:51:16,740 - INFO - Number is a valid Indian number
+2024-09-08 03:51:16,740 - INFO - Duplicate contact found: arfaz with number 9048057376 (formatted: 919048057376) has already been processed. Skipping.
+2024-09-08 03:51:16,740 - INFO - Reading contact: ARFAZ, 7356571857
+2024-09-08 03:51:16,741 - INFO - Validating number: 7356571857
+2024-09-08 03:51:16,741 - WARNING - Number format not recognized after cleaning: 7356571857
+2024-09-08 03:51:16,741 - ERROR - Failed to format number for contact ARFAZ: 7356571857
+2024-09-08 03:51:16,741 - ERROR - Error reading contact: I/O operation on closed file.
+2024-09-08 03:51:16,741 - INFO - Reading contact: irshad, 9895296142
+2024-09-08 03:51:16,741 - INFO - Validating number: 9895296142
+2024-09-08 03:51:16,741 - INFO - Number is a valid Indian number
+2024-09-08 03:51:16,741 - INFO - Duplicate contact found: irshad with number 9895296142 (formatted: 919895296142) has already been processed. Skipping.
+2024-09-08 03:51:16,741 - INFO - Total time taken for sending messages: 0.01 seconds
+2024-09-08 03:51:16,741 - INFO - Total successful sends: 0
+2024-09-08 03:51:16,741 - INFO - Total failed sends: 1
+2024-09-08 03:51:16,741 - INFO - Closing the browser
+2024-09-08 03:51:58,183 - INFO - RateLimiter initialized with 200 tokens and last reset at 1725747718.1831365
+2024-09-08 03:51:58,183 - INFO - Initializing Chrome driver with custom user data directory
+2024-09-08 03:51:58,269 - WARNING - The chromedriver version (127.0.6533.119) detected in PATH at chromedriver.EXE might not be compatible with the detected chrome version (128.0.6613.119); currently, chromedriver 128.0.6613.119 is recommended for chrome 128.*, so it is advised to delete the driver in PATH and retry
+2024-09-08 03:52:05,516 - INFO - QR code scanned
+2024-09-08 03:52:05,517 - INFO - Loaded 5 sent contacts from sent_contacts.csv
+2024-09-08 03:52:05,517 - INFO - Reading contact: arfaz, 9048057376
+2024-09-08 03:52:05,517 - INFO - Validating number: 9048057376
+2024-09-08 03:52:05,517 - INFO - Number is a valid Indian number
+2024-09-08 03:52:05,517 - INFO - Duplicate contact found: arfaz with number 9048057376 (formatted: 919048057376) has already been processed. Skipping.
+2024-09-08 03:52:05,517 - INFO - Reading contact: ARFAZ, 7356571857
+2024-09-08 03:52:05,517 - INFO - Validating number: 7356571857
+2024-09-08 03:52:05,517 - WARNING - Number format not recognized after cleaning: 7356571857
+2024-09-08 03:52:05,517 - ERROR - Failed to format number for contact ARFAZ: 7356571857
+2024-09-08 03:52:05,517 - ERROR - Error reading contact: I/O operation on closed file.
+2024-09-08 03:52:05,517 - INFO - Reading contact: irshad, 9895296142
+2024-09-08 03:52:05,517 - INFO - Validating number: 9895296142
+2024-09-08 03:52:05,518 - INFO - Number is a valid Indian number
+2024-09-08 03:52:05,518 - INFO - Duplicate contact found: irshad with number 9895296142 (formatted: 919895296142) has already been processed. Skipping.
+2024-09-08 03:52:05,518 - INFO - Total time taken for sending messages: 0.00 seconds
+2024-09-08 03:52:05,518 - INFO - Total successful sends: 0
+2024-09-08 03:52:05,518 - INFO - Total failed sends: 1
+2024-09-08 03:52:05,518 - INFO - Closing the browser
+2024-09-08 03:54:33,170 - INFO - RateLimiter initialized with 200 tokens and last reset at 1725747873.1701844
+2024-09-08 03:54:33,170 - INFO - Initializing Chrome driver with custom user data directory
+2024-09-08 03:54:33,263 - WARNING - The chromedriver version (127.0.6533.119) detected in PATH at chromedriver.EXE might not be compatible with the detected chrome version (128.0.6613.119); currently, chromedriver 128.0.6613.119 is recommended for chrome 128.*, so it is advised to delete the driver in PATH and retry
+2024-09-08 03:54:42,117 - INFO - QR code scanned
+2024-09-08 03:54:42,117 - INFO - Loaded 5 sent contacts from sent_contacts.csv
+2024-09-08 03:54:42,118 - INFO - Reading contact: arfaz, 9048057376
+2024-09-08 03:54:42,118 - INFO - Validating number: 9048057376
+2024-09-08 03:54:42,118 - INFO - Number is a valid Indian number
+2024-09-08 03:54:42,118 - INFO - Duplicate contact found: arfaz with number 9048057376 (formatted: 919048057376) has already been processed. Skipping.
+2024-09-08 03:54:42,118 - INFO - Reading contact: ARFAZ, 7356571857
+2024-09-08 03:54:42,118 - INFO - Validating number: 7356571857
+2024-09-08 03:54:42,118 - INFO - Number is a valid Indian number
+2024-09-08 03:54:47,175 - INFO - Opened chat for contact: ARFAZ
+2024-09-08 03:54:47,588 - INFO - Attachment box clicked
+2024-09-08 03:54:48,142 - INFO - Document option clicked
+2024-09-08 03:54:50,182 - INFO - PDF file selected through file input
+2024-09-08 03:54:58,371 - INFO - Message sent to contact: ARFAZ
+2024-09-08 03:54:58,386 - INFO - Message sent and confirmed for contact: ARFAZ
+2024-09-08 03:54:58,386 - INFO - Saved sent contact ARFAZ with number 7356571857 and formatted number 917356571857
+2024-09-08 03:55:14,387 - INFO - Random delay of 16 seconds before moving to next contact.
+2024-09-08 03:55:14,387 - INFO - Time taken for sending to contact ARFAZ: 32.27 seconds
+2024-09-08 03:55:14,387 - INFO - Token acquired. Remaining tokens: 199
+2024-09-08 03:55:14,387 - INFO - Reading contact: irshad, 9895296142
+2024-09-08 03:55:14,387 - INFO - Validating number: 9895296142
+2024-09-08 03:55:14,387 - INFO - Number is a valid Indian number
+2024-09-08 03:55:14,387 - INFO - Duplicate contact found: irshad with number 9895296142 (formatted: 919895296142) has already been processed. Skipping.
+2024-09-08 03:55:14,387 - INFO - Total time taken for sending messages: 32.27 seconds
+2024-09-08 03:55:14,387 - INFO - Total successful sends: 1
+2024-09-08 03:55:14,387 - INFO - Total failed sends: 0
+2024-09-08 03:55:14,387 - INFO - Closing the browser
+2024-09-08 04:10:35,206 - INFO - RateLimiter initialized with 200 tokens and last reset at 1725748835.2069578
+2024-09-08 04:10:35,206 - INFO - Initializing Chrome driver with custom user data directory
+2024-09-08 04:10:35,329 - WARNING - The chromedriver version (127.0.6533.119) detected in PATH at chromedriver.EXE might not be compatible with the detected chrome version (128.0.6613.119); currently, chromedriver 128.0.6613.119 is recommended for chrome 128.*, so it is advised to delete the driver in PATH and retry
+2024-09-08 04:10:45,951 - INFO - QR code scanned
+2024-09-08 04:10:45,951 - INFO - Loaded 7 sent contacts from sent_contacts.csv
+2024-09-08 04:10:45,956 - INFO - Reading contact: irshad, 0569161388
+2024-09-08 04:10:45,956 - INFO - Validating number: 0569161388
+2024-09-08 04:10:45,958 - INFO - Number is valid for AE: +971569161388
+2024-09-08 04:10:45,958 - INFO - Duplicate contact found: irshad with number 0569161388 (formatted: 971569161388) has already been processed. Skipping.
+2024-09-08 04:10:45,958 - INFO - Reading contact: arfaz, 9048057376
+2024-09-08 04:10:45,958 - INFO - Validating number: 9048057376
+2024-09-08 04:10:45,961 - INFO - Number is valid for IN: +919048057376
+2024-09-08 04:10:45,961 - INFO - Duplicate contact found: arfaz with number 9048057376 (formatted: 919048057376) has already been processed. Skipping.
+2024-09-08 04:10:45,961 - INFO - Reading contact: irshad, 9895296142
+2024-09-08 04:10:45,961 - INFO - Validating number: 9895296142
+2024-09-08 04:10:45,961 - INFO - Number is valid for IN: +919895296142
+2024-09-08 04:10:45,961 - INFO - Duplicate contact found: irshad with number 9895296142 (formatted: 919895296142) has already been processed. Skipping.
+2024-09-08 04:10:45,961 - INFO - Reading contact: ARFAZ, 7356571857
+2024-09-08 04:10:45,961 - INFO - Validating number: 7356571857
+2024-09-08 04:10:45,961 - INFO - Number is valid for IN: +917356571857
+2024-09-08 04:10:45,961 - INFO - Duplicate contact found: ARFAZ with number 7356571857 (formatted: 917356571857) has already been processed. Skipping.
+2024-09-08 04:10:45,961 - INFO - Total time taken for sending messages: 0.01 seconds
+2024-09-08 04:10:45,961 - INFO - Total successful sends: 0
+2024-09-08 04:10:45,961 - INFO - Total failed sends: 0
+2024-09-08 04:10:45,961 - INFO - Closing the browser
+2024-09-08 04:10:55,606 - INFO - RateLimiter initialized with 200 tokens and last reset at 1725748855.606274
+2024-09-08 04:10:55,607 - INFO - Initializing Chrome driver with custom user data directory
+2024-09-08 04:10:55,702 - WARNING - The chromedriver version (127.0.6533.119) detected in PATH at chromedriver.EXE might not be compatible with the detected chrome version (128.0.6613.119); currently, chromedriver 128.0.6613.119 is recommended for chrome 128.*, so it is advised to delete the driver in PATH and retry
+2024-09-08 04:11:02,440 - INFO - QR code scanned
+2024-09-08 04:11:02,445 - INFO - Loaded 0 sent contacts from sent_contacts.csv
+2024-09-08 04:11:02,445 - INFO - Reading contact: irshad, 0569161388
+2024-09-08 04:11:02,445 - INFO - Validating number: 0569161388
+2024-09-08 04:11:02,446 - INFO - Number is valid for AE: +971569161388
+2024-09-08 04:11:07,745 - INFO - Opened chat for contact: irshad
+2024-09-08 04:11:08,201 - INFO - Attachment box clicked
+2024-09-08 04:11:08,756 - INFO - Document option clicked
+2024-09-08 04:11:10,799 - INFO - PDF file selected through file input
+2024-09-08 04:11:18,841 - INFO - Message sent to contact: irshad
+2024-09-08 04:11:18,850 - INFO - Message sent and confirmed for contact: irshad
+2024-09-08 04:11:18,850 - INFO - Saved sent contact irshad with number 0569161388 and formatted number 971569161388
+2024-09-08 04:11:23,852 - INFO - Random delay of 5 seconds before moving to next contact.
+2024-09-08 04:11:23,852 - INFO - Time taken for sending to contact irshad: 21.41 seconds
+2024-09-08 04:11:23,852 - INFO - Token acquired. Remaining tokens: 199
+2024-09-08 04:11:23,852 - INFO - Reading contact: arfaz, 9048057376
+2024-09-08 04:11:23,852 - INFO - Validating number: 9048057376
+2024-09-08 04:11:23,855 - INFO - Number is valid for IN: +919048057376
+2024-09-08 04:11:29,086 - INFO - Opened chat for contact: arfaz
+2024-09-08 04:11:29,511 - INFO - Attachment box clicked
+2024-09-08 04:11:30,059 - INFO - Document option clicked
+2024-09-08 04:11:32,091 - INFO - PDF file selected through file input
+2024-09-08 04:11:40,129 - INFO - Message sent to contact: arfaz
+2024-09-08 04:11:40,136 - INFO - Message sent and confirmed for contact: arfaz
+2024-09-08 04:11:40,136 - INFO - Saved sent contact arfaz with number 9048057376 and formatted number 919048057376
+2024-09-08 04:11:47,137 - INFO - Random delay of 7 seconds before moving to next contact.
+2024-09-08 04:11:47,137 - INFO - Time taken for sending to contact arfaz: 23.28 seconds
+2024-09-08 04:11:47,137 - INFO - Token acquired. Remaining tokens: 199
+2024-09-08 04:11:47,137 - INFO - Reading contact: irshad, 9895296142
+2024-09-08 04:11:47,137 - INFO - Validating number: 9895296142
+2024-09-08 04:11:47,137 - INFO - Number is valid for IN: +919895296142
+2024-09-08 04:11:52,368 - INFO - Opened chat for contact: irshad
+2024-09-08 04:11:52,793 - INFO - Attachment box clicked
+2024-09-08 04:11:53,333 - INFO - Document option clicked
+2024-09-08 04:11:55,366 - INFO - PDF file selected through file input
+2024-09-08 04:12:03,411 - INFO - Message sent to contact: irshad
+2024-09-08 04:12:03,417 - INFO - Message sent and confirmed for contact: irshad
+2024-09-08 04:12:03,418 - INFO - Saved sent contact irshad with number 9895296142 and formatted number 919895296142
+2024-09-08 04:12:15,419 - INFO - Random delay of 12 seconds before moving to next contact.
+2024-09-08 04:12:15,419 - INFO - Time taken for sending to contact irshad: 28.28 seconds
+2024-09-08 04:12:15,419 - INFO - Token acquired. Remaining tokens: 199
+2024-09-08 04:12:15,419 - INFO - Reading contact: ARFAZ, 7356571857
+2024-09-08 04:12:15,419 - INFO - Validating number: 7356571857
+2024-09-08 04:12:15,419 - INFO - Number is valid for IN: +917356571857
+2024-09-08 04:12:20,575 - INFO - Opened chat for contact: ARFAZ
+2024-09-08 04:12:21,008 - INFO - Attachment box clicked
+2024-09-08 04:12:21,545 - INFO - Document option clicked
+2024-09-08 04:12:23,574 - INFO - PDF file selected through file input
+2024-09-08 04:12:31,606 - INFO - Message sent to contact: ARFAZ
+2024-09-08 04:12:31,613 - INFO - Message sent and confirmed for contact: ARFAZ
+2024-09-08 04:12:31,613 - INFO - Saved sent contact ARFAZ with number 7356571857 and formatted number 917356571857
+2024-09-08 04:12:50,614 - INFO - Random delay of 19 seconds before moving to next contact.
+2024-09-08 04:12:50,614 - INFO - Time taken for sending to contact ARFAZ: 35.20 seconds
+2024-09-08 04:12:50,614 - INFO - Token acquired. Remaining tokens: 199
+2024-09-08 04:12:50,614 - INFO - Total time taken for sending messages: 108.17 seconds
+2024-09-08 04:12:50,614 - INFO - Total successful sends: 4
+2024-09-08 04:12:50,614 - INFO - Total failed sends: 0
+2024-09-08 04:12:50,614 - INFO - Closing the browser
